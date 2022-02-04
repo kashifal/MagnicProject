@@ -315,6 +315,8 @@ label {
 }
 .types1-1 h3 {
   font-size: 16px;
+  font-weight: 400;
+  margin-top: 10px;
 }
 .types1-1 span {
   color: #212d97;
@@ -329,66 +331,109 @@ label {
 CAROUSEL
 
 */
-
-.carousel {
+.container {
   height: 90vh;
   width: 100vw;
   display: flex;
   align-items: center;
-  margin-top: 8vh;
+  margin-top: 10vh;
   justify-content: center;
 }
-.carousel-margin {
-  height: 100%;
+.fluid-container {
+  height: 96%;
   width: 94%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
 }
-.carousel-text {
-  height: 18%;
+.cont-1 {
+  height: 20%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-.carousel-text h3 {
-  font-size: 22px;
-  letter-spacing: -1;
-}
-.carousel-text p {
-  font-size: 16px;
-}
-
-.slider {
-  height: 80%;
+.wrapper {
+  height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+}
+.carousel {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .card1 {
-  height: 90%;
-  width: 22%;
-  background-color: rgb(27, 175, 35);
+  height: 438px;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  flex-direction: column;
 }
 
 .card2 {
-  height: 90%;
-  width: 22%;
-  background-color: rgb(27, 153, 175);
+  height: 438px;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .card3 {
-  height: 90%;
-  width: 22%;
-  background-color: rgb(175, 27, 138);
+  height: 438px;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .card4 {
-  height: 90%;
-  width: 22%;
-  background-color: rgb(175, 148, 27);
+  height: 438px;
+
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.card5 {
+  height: 438px;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.card6 {
+  height: 438px;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.slick-slide {
+  margin: 10px;
+  color: black;
+}
+
+.slick-next:before,
+.slick-prev:before {
+  font-family: slick;
+  font-size: 20px;
+  line-height: 1;
+  opacity: 0.75;
+  color: blue;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.picture {
+  height: 25vh;
+  width: 100%;
+  background-image: url("https://images.unsplash.com/photo-1599420186946-7b6fb4e297f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60");
+  background-size: cover;
+  background-position: center;
+}
+.property-info {
+  height: 75%;
+  width: 100%;
+  padding: 10px 10px;
+  background: orangered;
 }
