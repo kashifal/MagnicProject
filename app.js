@@ -40,7 +40,7 @@ for (var i = 0; i < label.length; i++) {
                             {
                                 breakpoint: 1024,
                                 settings: {
-                                    slidesToShow: 3,
+                                    slidesToShow: 2,
                                     slidesToScroll: 3,
                                     infinite: true, 
                                 }
@@ -114,3 +114,46 @@ for (var i = 0; i < label.length; i++) {
     window.addEventListener("orientationChange", lazyload);
   }
 })
+
+
+
+
+
+  const sidebar = document.querySelector('.sidebar');
+  const overlay = document.querySelector('.overlay'); 
+const bars = document.querySelector('.bars');
+
+
+
+bars.addEventListener('click', function(){ 
+  sidebar.classList.toggle('show'); 
+  overlay.classList.add('showed')
+});
+ overlay.addEventListener('click', function(){
+  sidebar.classList.remove('show'); 
+  overlay.classList.remove('showed') 
+ })
+
+
+ $(document).ready(function(){
+			$('.customer-logos').slick({
+				slidesToShow: 5,
+				slidesToScroll: 1,
+				autoplay: true,
+				autoplaySpeed: 1000,
+				arrows: false,
+				dots: false,
+					pauseOnHover: false,
+					responsive: [{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 3
+					}
+				}, {
+					breakpoint: 520,
+					settings: {
+						slidesToShow: 2
+					}
+				}]
+			});
+		});
