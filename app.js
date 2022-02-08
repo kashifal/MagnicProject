@@ -117,23 +117,7 @@ for (var i = 0; i < label.length; i++) {
 
 
 
-
-
-  const sidebar = document.querySelector('.sidebar');
-  const overlay = document.querySelector('.overlay'); 
-const bars = document.querySelector('.bars');
-
-
-
-bars.addEventListener('click', function(){ 
-  sidebar.classList.toggle('show'); 
-  overlay.classList.add('showed')
-});
- overlay.addEventListener('click', function(){
-  sidebar.classList.remove('show'); 
-  overlay.classList.remove('showed') 
- })
-
+ 
 
  $(document).ready(function(){
 			$('.customer-logos').slick({
