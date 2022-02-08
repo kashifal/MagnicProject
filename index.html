@@ -17,6 +17,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Vanila CSS -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="popup.css">
     <!-- Title -->
     <title>Landlord | Sell, Buy, and Rent Property </title>
 </head>
@@ -33,19 +34,20 @@
             </div>
         </div>
         <div class="navbar-right-section"> 
-            <a href="#"> <svg width="22" height="18" viewBox="0 0 167 177" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect y="12" width="150" height="3" fill="white" />
-                <rect x="4" y="30" width="143" height="143" fill="#212D97" stroke="white" stroke-width="8" />
-                <path d="M55 133C55 124.811 61.6385 118.172 69.8276 118.172H83.1724C91.3615 118.172 98 124.811 98 133V176H55V133Z"
-                    fill="white" />
-                <rect y="17" width="150" height="8" fill="white" />
-                <circle cx="132.5" cy="40.02" r="34.5" fill="white" />
-                <path
-                    d="M146.658 45.9304H137.054V55.756H128.111V45.9304H118.506V37.4848H128.111V27.604H137.054V37.4848H146.658V45.9304Z"
-                    fill="#212D97" />
-            </svg>
+            <a href="#"> 
+                <svg width="22" height="18" viewBox="0 0 167 177" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="4" y="30" width="143" height="143" fill="white" stroke="#212D97" stroke-width="8" />
+                    <path d="M55 133C55 124.811 61.6385 118.172 69.8276 118.172H83.1724C91.3615 118.172 98 124.811 98 133V176H55V133Z"
+                        fill="#212D97" />
+                    <rect y="17" width="150" height="8" fill="#212D97" />
+                    <circle cx="132.5" cy="40.02" r="34.5" fill="#212D97" />
+                    <path
+                        d="M146.658 45.9304H137.054V55.756H128.111V45.9304H118.506V37.4848H128.111V27.604H137.054V37.4848H146.658V45.9304Z"
+                        fill="white" />
+                </svg>
+
      Add Property</a>
-            <a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+            <a class="add" href="#popup"><i class="far fa-user" aria-hidden="true"></i></a>
         </div>
     </div>
 </div>
@@ -57,16 +59,16 @@
     <div class="banner-margin">
         <form action="" method="post">
             <h2>Search Property</h2>
-            <select name="" id="">
+            <select name="" id="type">
             <option disabled selected value="#"> &#xf1ad;  Property Type</option>
             <option value="#">Commercial</option>
             <option value="#">Agricultural</option>
             <option value="#">Industrial</option>
             <option value="#">Residental</option> 
             </select>
-            <select name="" id="">
+            <select name="" id="city">
                 <option disabled selected value="#"> &#xf279;  Select City</option>
-                <option value="#">Lahore</option>
+                <option value="#" id="lahore">Lahore</option>
                 <option value="#">Islamabad</option>
                 <option value="#">Quetta</option>
                 <option value="#">Peshawar</option>
@@ -74,7 +76,7 @@
                 <option value="#">Nankana Sahib</option>
                 <option value="#">Karachi</option>
             </select>
-            <select name="" id="">
+            <select name="" id="area">
                 <option disabled selected value="#"> &#xf279; Select Area</option>
                 <option value="#">Gulberg III</option>
                 <option value="#">MughalPura</option>
@@ -87,7 +89,7 @@
             <div id="radio">
                 <label class="not-active" for="Sell">Sell</label>
                 <label class="not-active" for="Rent">Rent</label>
-                <label class=" active not-active" for="Buy">Buy</label> 
+                <label class=" active not-active" for="Buy">Invest</label> 
             </div>
            <button class="btn" type="submit">
                <i class="fa fa-search"></i> Search
@@ -110,21 +112,21 @@
                         </div>
                         <div class="types1-1">
                         <span class="iconify" data-icon="fontisto:holiday-village"  data-width="40" data-height="40"></span>
-                            <h3>House</h3>
+                            <h3>Villas</h3>
                         </div>
                     </div>
                     <div class="types1">
                         <div class="types1-1">
                     <span   class="iconify" data-icon="ep:office-building"  data-width="40" data-height="40"></span>
-                            <h3>Industrial</h3>
+                            <h3>Apartments</h3>
                         </div>
                         <div class="types1-1"> 
                             <span class="iconify" data-icon="carbon:industry"  data-width="40" data-height="40"></span>
-                            <h3>House</h3>
+                            <h3>Industrial</h3>
                         </div>
                         <div class="types1-1"> 
                             <span class="iconify" data-icon="emojione-monotone:house-with-garden"  data-width="40" data-height="40"></span>
-                            <h3>House</h3>
+                            <h3>Banglows</h3>
                         </div>
                     </div>
                     
@@ -148,17 +150,17 @@
         <div class="wrapper">
             <div class="carousel">
                 <div class="card1">
-                  <div id="bg-image"   class="picture" lazy> 
+                  <div id="bg-image"   class="picture lazy"> 
                   </div>
                   <div class="property-info">
                     <div class="price">
-                        <h2>PKR 82,00000</h2>
+                        <h2>27 SqFt Apartments</h2>
                         <a href="#">For Sale</a>
-                    </div><br>
+                    </div>
                     <div class="adress">
-                        <span class="iconify" data-icon="fa-solid:map-signs" style="color: #212d97;" data-width="50" data-height="50"></span>
-                        <P style="margin-left: 5px;">29 Houston Natioanal Park</P>
-                    </div><br>
+                    <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
+                        <P style="margin: 10px;">29 Houston Natioanal Park</P>
+                    </div> <br>
                     <div class="specialIn">
                          <div class="cd1">
                             <div class="bed">
@@ -168,13 +170,8 @@
                                     3 Beds
                                 </p>
                             </div>
-                            <div class="bed">
-                                <span class="iconify" data-icon="bx:bx-area" style="color: #212d97;" data-width="50" data-height="50"></span>
-                                <p>
-                                    23000 Sq.Ft
-                                </p>
-                            </div>
-                         </div><br>
+                           
+                         </div>
                            <div class="cd1">
                                 <div class="bed">
                                     <span class="iconify" data-icon="majesticons:bath-shower-line" style="color: #212d97;" data-width="50"
@@ -183,33 +180,37 @@
                                         4 Bath
                                     </p>
                                 </div>
+                                
+                           </div>
+                            <div class="cd1">
                                 <div class="bed">
                                     <span class="iconify" data-icon="cil:garage" style="color: #212d97;" data-width="50" data-height="50"></span>
                                     <p>
                                         1 Gar
                                     </p>
                                 </div>
-                           </div>
+                            
+                            </div>
+                           
                     </div><br>
                     <div class="buttons">
-                        <a href="#">Contact Seller</a>
-                        <a href="#">Information</a>
+                        <a href="tel:+923067250956"><i class="far fa-phone-alt"></i>  Call Now </a>
+                        <a href="#inquire">I'm Interested</a>
                     </div>
                   </div>
                 </div>
                 <div class="card1">
-                    <div id="bg-image"   class="picture1 lazy" >
+                    <div id="bg-image" class="picture1 lazy">
                     </div>
                     <div class="property-info">
                         <div class="price">
-                            <h2>PKR 82,00000</h2>
+                            <h2>27 SqFt Apartments</h2>
                             <a href="#">For Sale</a>
-                        </div><br>
+                        </div>
                         <div class="adress">
-                            <span class="iconify" data-icon="fa-solid:map-signs" style="color: #212d97;" data-width="50"
-                                data-height="50"></span>
-                            <P style="margin-left: 5px;">29 Houston Natioanal Park</P>
-                        </div><br>
+                            <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
+                            <P style="margin: 10px;">29 Houston Natioanal Park</P>
+                        </div> <br>
                         <div class="specialIn">
                             <div class="cd1">
                                 <div class="bed">
@@ -219,14 +220,8 @@
                                         3 Beds
                                     </p>
                                 </div>
-                                <div class="bed">
-                                    <span class="iconify" data-icon="bx:bx-area" style="color: #212d97;" data-width="50"
-                                        data-height="50"></span>
-                                    <p>
-                                        23000 Sq.Ft
-                                    </p>
-                                </div>
-                            </div><br>
+                
+                            </div>
                             <div class="cd1">
                                 <div class="bed">
                                     <span class="iconify" data-icon="majesticons:bath-shower-line" style="color: #212d97;"
@@ -235,6 +230,9 @@
                                         4 Bath
                                     </p>
                                 </div>
+                
+                            </div>
+                            <div class="cd1">
                                 <div class="bed">
                                     <span class="iconify" data-icon="cil:garage" style="color: #212d97;" data-width="50"
                                         data-height="50"></span>
@@ -242,27 +240,28 @@
                                         1 Gar
                                     </p>
                                 </div>
+                
                             </div>
+                
                         </div><br>
                         <div class="buttons">
-                            <a href="#">Contact Seller</a>
-                            <a href="#">Information</a>
+                            <a href="tel:+923067250956"><i class="far fa-phone-alt"></i> Call Now </a>
+                            <a href="#inquire">I'm Interested</a>
                         </div>
                     </div>
                 </div>
                 <div class="card1">
-                    <div id="bg-image"   class="picture2 lazy" >
+                    <div id="bg-image" class="picture2 lazy">
                     </div>
                     <div class="property-info">
                         <div class="price">
-                            <h2>PKR 82,00000</h2>
+                            <h2>27 SqFt Apartments</h2>
                             <a href="#">For Sale</a>
-                        </div><br>
+                        </div>
                         <div class="adress">
-                            <span class="iconify" data-icon="fa-solid:map-signs" style="color: #212d97;" data-width="50"
-                                data-height="50"></span>
-                            <P style="margin-left: 5px;">29 Houston Natioanal Park</P>
-                        </div><br>
+                            <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
+                            <P style="margin: 10px;">29 Houston Natioanal Park</P>
+                        </div> <br>
                         <div class="specialIn">
                             <div class="cd1">
                                 <div class="bed">
@@ -272,14 +271,8 @@
                                         3 Beds
                                     </p>
                                 </div>
-                                <div class="bed">
-                                    <span class="iconify" data-icon="bx:bx-area" style="color: #212d97;" data-width="50"
-                                        data-height="50"></span>
-                                    <p>
-                                        23000 Sq.Ft
-                                    </p>
-                                </div>
-                            </div><br>
+                
+                            </div>
                             <div class="cd1">
                                 <div class="bed">
                                     <span class="iconify" data-icon="majesticons:bath-shower-line" style="color: #212d97;"
@@ -288,6 +281,9 @@
                                         4 Bath
                                     </p>
                                 </div>
+                
+                            </div>
+                            <div class="cd1">
                                 <div class="bed">
                                     <span class="iconify" data-icon="cil:garage" style="color: #212d97;" data-width="50"
                                         data-height="50"></span>
@@ -295,27 +291,28 @@
                                         1 Gar
                                     </p>
                                 </div>
+                
                             </div>
+                
                         </div><br>
                         <div class="buttons">
-                            <a href="#">Contact Seller</a>
-                            <a href="#">Information</a>
+                            <a href="tel:+923067250956"><i class="far fa-phone-alt"></i> Call Now </a>
+                            <a href="#inquire">I'm Interested</a>
                         </div>
                     </div>
                 </div>
                 <div class="card1">
-                    <div id="bg-image"   class="picture3 lazy" >
+                    <div id="bg-image" class="picture3 lazy">
                     </div>
                     <div class="property-info">
                         <div class="price">
-                            <h2>PKR 82,00000</h2>
+                            <h2>27 SqFt Apartments</h2>
                             <a href="#">For Sale</a>
-                        </div><br>
+                        </div>
                         <div class="adress">
-                            <span class="iconify" data-icon="fa-solid:map-signs" style="color: #212d97;" data-width="50"
-                                data-height="50"></span>
-                            <P style="margin-left: 5px;">29 Houston Natioanal Park</P>
-                        </div><br>
+                            <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
+                            <P style="margin: 10px;">29 Houston Natioanal Park</P>
+                        </div> <br>
                         <div class="specialIn">
                             <div class="cd1">
                                 <div class="bed">
@@ -325,14 +322,8 @@
                                         3 Beds
                                     </p>
                                 </div>
-                                <div class="bed">
-                                    <span class="iconify" data-icon="bx:bx-area" style="color: #212d97;" data-width="50"
-                                        data-height="50"></span>
-                                    <p>
-                                        23000 Sq.Ft
-                                    </p>
-                                </div>
-                            </div><br>
+                
+                            </div>
                             <div class="cd1">
                                 <div class="bed">
                                     <span class="iconify" data-icon="majesticons:bath-shower-line" style="color: #212d97;"
@@ -341,6 +332,9 @@
                                         4 Bath
                                     </p>
                                 </div>
+                
+                            </div>
+                            <div class="cd1">
                                 <div class="bed">
                                     <span class="iconify" data-icon="cil:garage" style="color: #212d97;" data-width="50"
                                         data-height="50"></span>
@@ -348,27 +342,28 @@
                                         1 Gar
                                     </p>
                                 </div>
+                
                             </div>
+                
                         </div><br>
                         <div class="buttons">
-                            <a href="#">Contact Seller</a>
-                            <a href="#">Information</a>
+                            <a href="tel:+923067250956"><i class="far fa-phone-alt"></i> Call Now </a>
+                            <a href="#inquire">I'm Interested</a>
                         </div>
                     </div>
                 </div>
                 <div class="card1">
-                    <div id="bg-image"   class="picture4 lazy" >
+                    <div id="bg-image" class="picture4 lazy">
                     </div>
                     <div class="property-info">
                         <div class="price">
-                            <h2>PKR 82,00000</h2>
+                            <h2>27 SqFt Apartments</h2>
                             <a href="#">For Sale</a>
-                        </div><br>
+                        </div>
                         <div class="adress">
-                            <span class="iconify" data-icon="fa-solid:map-signs" style="color: #212d97;" data-width="50"
-                                data-height="50"></span>
-                            <P style="margin-left: 5px;">29 Houston Natioanal Park</P>
-                        </div><br>
+                            <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
+                            <P style="margin: 10px;">29 Houston Natioanal Park</P>
+                        </div> <br>
                         <div class="specialIn">
                             <div class="cd1">
                                 <div class="bed">
@@ -378,14 +373,8 @@
                                         3 Beds
                                     </p>
                                 </div>
-                                <div class="bed">
-                                    <span class="iconify" data-icon="bx:bx-area" style="color: #212d97;" data-width="50"
-                                        data-height="50"></span>
-                                    <p>
-                                        23000 Sq.Ft
-                                    </p>
-                                </div>
-                            </div><br>
+                
+                            </div>
                             <div class="cd1">
                                 <div class="bed">
                                     <span class="iconify" data-icon="majesticons:bath-shower-line" style="color: #212d97;"
@@ -394,6 +383,9 @@
                                         4 Bath
                                     </p>
                                 </div>
+                
+                            </div>
+                            <div class="cd1">
                                 <div class="bed">
                                     <span class="iconify" data-icon="cil:garage" style="color: #212d97;" data-width="50"
                                         data-height="50"></span>
@@ -401,27 +393,28 @@
                                         1 Gar
                                     </p>
                                 </div>
+                
                             </div>
+                
                         </div><br>
                         <div class="buttons">
-                            <a href="#">Contact Seller</a>
-                            <a href="#">Information</a>
+                            <a href="tel:+923067250956"><i class="far fa-phone-alt"></i> Call Now </a>
+                            <a href="#inquire">I'm Interested</a>
                         </div>
                     </div>
                 </div>
                 <div class="card1">
-                    <div id="bg-image"   class="picture5 lazy" >
+                    <div id="bg-image" class="picture5 lazy">
                     </div>
                     <div class="property-info">
                         <div class="price">
-                            <h2>PKR 82,00000</h2>
+                            <h2>27 SqFt Apartments</h2>
                             <a href="#">For Sale</a>
-                        </div><br>
+                        </div>
                         <div class="adress">
-                            <span class="iconify" data-icon="fa-solid:map-signs" style="color: #212d97;" data-width="50"
-                                data-height="50"></span>
-                            <P style="margin-left: 5px;">29 Houston Natioanal Park</P>
-                        </div><br>
+                            <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
+                            <P style="margin: 10px;">29 Houston Natioanal Park</P>
+                        </div> <br>
                         <div class="specialIn">
                             <div class="cd1">
                                 <div class="bed">
@@ -431,14 +424,8 @@
                                         3 Beds
                                     </p>
                                 </div>
-                                <div class="bed">
-                                    <span class="iconify" data-icon="bx:bx-area" style="color: #212d97;" data-width="50"
-                                        data-height="50"></span>
-                                    <p>
-                                        23000 Sq.Ft
-                                    </p>
-                                </div>
-                            </div><br>
+                
+                            </div>
                             <div class="cd1">
                                 <div class="bed">
                                     <span class="iconify" data-icon="majesticons:bath-shower-line" style="color: #212d97;"
@@ -447,6 +434,9 @@
                                         4 Bath
                                     </p>
                                 </div>
+                
+                            </div>
+                            <div class="cd1">
                                 <div class="bed">
                                     <span class="iconify" data-icon="cil:garage" style="color: #212d97;" data-width="50"
                                         data-height="50"></span>
@@ -454,11 +444,13 @@
                                         1 Gar
                                     </p>
                                 </div>
+                
                             </div>
+                
                         </div><br>
                         <div class="buttons">
-                            <a href="#">Contact Seller</a>
-                            <a href="#">Information</a>
+                            <a href="tel:+923067250956"><i class="far fa-phone-alt"></i> Call Now </a>
+                            <a href="#inquire">I'm Interested</a>
                         </div>
                     </div>
                 </div>
@@ -611,6 +603,22 @@
         </div>
     </footer>
  
+<!-- Pop-up -->
+
+
+<div class="pop-up-form"></div>
+<div class="pop-up-overlay"></div>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

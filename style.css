@@ -18,6 +18,7 @@ html {
 }
 body {
   background-color: #fafafa;
+  position: relative;
 }
 /* Started */
 
@@ -70,14 +71,15 @@ body {
 }
 .navbar-right-section a:nth-child(1) {
   border: 1px solid var(--border);
-  background-color: #212D97;
   color: white;
+  color: #212d97;
   text-decoration: none;
 }
 
 
 .navbar-right-section a:hover {
   border: 1px solid var(--border);
+  
 }
 
 .input-container {
@@ -127,6 +129,59 @@ Navbar Style End Here
 Navbar Style End Here
 */
 
+
+.pop-up-form
+{
+position: fixed;
+height: 500px;  
+display: none;
+width: 450px; 
+transition: 0.3s ease;
+background-color: #212d97;
+z-index: 10;
+top: 50%;
+
+border-radius: 10px;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+.pop-up-overlay
+{
+  height: 100%;
+  width: 100%;
+  opacity: 100;
+  display: none;
+transition: 0.3s ease;
+  z-index: 5;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.527);
+  backdrop-filter: blur(3px);
+  top: 0%;
+  left: 0%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+Navbar Style End Here
+*/
+/*
+Navbar Style End Here
+*/
+/*
+Navbar Style End Here
+*/
+
 .banner {
   height: 60vh;
   width: 100vw;
@@ -164,10 +219,10 @@ select {
   padding-left: 1rem;
   padding-right: 100px;
   outline: none;
-   background-image: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png");
+   background-image: url("https://img.icons8.com/external-those-icons-fill-those-icons/10/000000/external-down-arrows-those-icons-fill-those-icons-7.png");
   background-repeat: no-repeat;
-  background-position-x: 98%;
-  background-position-y: 15px;
+  background-position-x: 98%; 
+  background-position-y: 18px;
   font-weight: 400;
   line-height: 30px;
   background-color: white;
@@ -508,6 +563,7 @@ CAROUSEL
   justify-content: space-between;
   overflow: hidden;
   flex-direction: column;
+  padding: 6px 6px;
 }
 
 .card2 {
@@ -591,13 +647,20 @@ CAROUSEL
   width: 13.74px;
   height: 13.74px;
 }
+.adress i
+{
+  color: #212d97;
+}
 .adress p {
-  font-size: 10.82px;
+  font-size: 12px;
 }
 .specialIn {
   display: flex;
-  align-items: flex-start;
-  flex-direction: column;
+  align-items: flex-start;  
+  border-top: 1px solid #e0e0e0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
 }
 .cd1 {
   display: flex;
@@ -645,7 +708,7 @@ CAROUSEL
   text-align: center;
   display: flex;
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: 5px;
   align-items: center;
   border: 1px solid #212d97;
   justify-content: center;
@@ -1257,36 +1320,12 @@ end grid system here
 end grid system here
 */
 
-.sidebar {
-  height: 100%;
-  width: 70%;
-  background-color: #141c66;
-  color: white;
-  font-size: 20px;
-  display: none;
-  position: fixed;
-  transition: 0.3s ease;
-  z-index: 10;
-  top: 0%;
-  bottom: 0%;
-}
-.overlay {
-  height: 100%;
-  width: 100%;
-  background-color: #212d8571;
-  z-index: 5;
-  bottom: 0%;
-  display: none;
-  position: fixed;
-  backdrop-filter: blur(1px);
-}
+ 
 
 .show {
   display: block;
-}
-.showed {
-  display: block;
-}
+  transition:.5s ease;
+} 
 /*
 end grid system here
 */
