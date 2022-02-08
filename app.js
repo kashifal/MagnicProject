@@ -121,6 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const sidebar = document.querySelector('.pop-up-form');
 const overlay = document.querySelector('.pop-up-overlay');
+const times = document.querySelector('.times');
 const bars = document.querySelector('.add');
 
 
@@ -134,6 +135,14 @@ overlay.addEventListener('click', function () {
   sidebar.style.transition = '0.3s ease-in'
   overlay.classList.remove('show')
 })
+
+
+times.addEventListener('click', function () {
+  sidebar.classList.remove('show');
+  sidebar.style.transition = '0.3s ease-in'
+  overlay.classList.remove('show')
+})
+
 
 
 $(document).ready(function () {
@@ -160,17 +169,3 @@ $(document).ready(function () {
 });
 
 
-
-
-const Karachi = ['karachi-1', 'karachi-2', 'karachi-3', 'karachi-4', 'karachi-5'];
-
-const city = document.getElementById('city');
-
-
-Karachi.forEach(e => {
-
-  city.append = e;
-  log(e)
-})
-
-console.log(city.options.innerHTML);

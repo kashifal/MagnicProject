@@ -133,45 +133,149 @@ Navbar Style End Here
 .pop-up-form
 {
 position: fixed;
-height: 500px;  
-display: none;
+height: 500px;   
 width: 450px; 
 transition: 0.3s ease;
-background-color: #212d97;
+background-color: #ffffff;
 z-index: 10;
 top: 50%;
-
+padding: 10px 20px;
+color: rgb(27, 27, 27);
 border-radius: 10px;
 left: 50%;
 transform: translate(-50%, -50%);
+  display: none;  
 }
 .pop-up-overlay
 {
   height: 100%;
   width: 100%;
-  opacity: 100;
-  display: none;
+   
 transition: 0.3s ease;
   z-index: 5;
-  position: absolute;
-  background-color: rgba(255, 255, 255, 0.527);
-  backdrop-filter: blur(3px);
+  position: fixed;
+  background-color: #212d97b2;
+  backdrop-filter: blur(6px); 
   top: 0%;
+  background-size: cover;
+  background-position: center;
   left: 0%;
+display: none; 
 }
 
 
+.popup-head
+{
+  height: 10%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(228, 227, 227);
+}
+.popup-head h2
+{
+
+  font-weight: 400;
+}
+.popup-head i
+{
+  cursor: pointer;
+  padding: 10px 10px;
+}
+
+.popup-body
+{
+  height: 90%;
+  width: 100%; 
+  font-size: 16px;
+  padding-top: 20px;
+}
+.popup-body h2
+{
+  font-size: 24px;
+  font-weight: 700;
+}
+.popup-body input
+{
+  padding: 8px 16px;
+  width: 100%;
+  margin-top: 20px;
+  height: 12%;
+  border-radius:4px;
+  outline: none;
+  border: 1px solid rgb(228, 227, 227);
+}
 
 
+.forget
+{
+    color: #212d97;
+    margin-top: 10px;
+    width: 100%;
+    font-weight: 700;
+    display: grid;
+  text-decoration: none;
+}
+
+.popup-body button
+{
+  
+  padding: 8px 16px;
+  width: 100%;
+  margin-top: 20px;
+  height: 12%;
+  background-color: #212d97;
+  border-radius:4px;
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  outline: none; 
+  border: transparent;
+}
+
+.re 
+{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.re a
+{
+  padding: 20px 20px;
+  width: 20px;
+  display: flex;
+  border: 1px solid #212d97;
+  margin-right: 10px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(241, 241, 241, 0.788);
+  height: 20px; 
+  border-radius: 50%;
+}
+ .re a img
+ {
+   width: 12px;
+   height: 12px;
+ }
 
 
+ .popup-last
+{
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  padding-top: 10px;
+  align-items: center;
+ border-top: 1px solid rgb(228, 227, 227);
+  justify-content: center;
 
-
-
-
-
-
-
+}
+.popup-last a
+{ 
+  color: #212d97;
+}
 /*
 Navbar Style End Here
 */
@@ -198,7 +302,7 @@ Navbar Style End Here
   align-items: center;
   justify-content: space-between;
 }
-form {
+.form {
   height: 100%;
   width: 30%;
   background-color: white;
@@ -210,7 +314,7 @@ form {
   flex-direction: column;
   padding: 20px 30px;
 }
-form h2 {
+.form h2 {
   font-size: 22px;
   letter-spacing: -1px;
 }
@@ -500,7 +604,7 @@ label {
 }
 .types1-1 h3 {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 600;
   margin-top: 10px;
 }
 .types1-1 span {
@@ -509,6 +613,7 @@ label {
 .text h2 {
   letter-spacing: -1px;
   font-size: 22px;
+  font-weight: 600;
 }
 
 /*
@@ -679,6 +784,7 @@ CAROUSEL
 }
 .specialIn .bed p {
   font-size: 10px;
+  font-weight: 600;
 }
 .buttons {
   width: 100%;
@@ -1399,7 +1505,7 @@ Media Queries at max-width:1300px
     flex-direction: column;
     color: #212d97;
   }
-  form {
+  .form {
     height: 100%;
     width: 35%;
     background-color: white;
@@ -1411,7 +1517,7 @@ Media Queries at max-width:1300px
     flex-direction: column;
     padding: 10px 10px;
   }
-  form h2 {
+  .form h2 {
     font-size: 20px;
     letter-spacing: -1px;
   }
@@ -1550,7 +1656,7 @@ Media Queries at max-width:1000px
     flex-direction: column;
     color: #212d97;
   }
-  form {
+  .form {
     height: 50%;
     width: 100%;
     background-color: white;
@@ -1562,7 +1668,7 @@ Media Queries at max-width:1000px
     flex-direction: column;
     padding: 10px 10px;
   }
-  form h2 {
+  .form h2 {
     font-size: 20px;
     letter-spacing: -1px;
   }
@@ -1755,7 +1861,7 @@ Media Queries at max-width:500px
     flex-direction: column;
     color: #212d97;
   }
-  form {
+  .form {
     height: 50%;
     width: 100%;
     background-color: white;
@@ -1767,7 +1873,7 @@ Media Queries at max-width:500px
     flex-direction: column;
     padding: 10px 10px;
   }
-  form h2 {
+  .form h2 {
     font-size: 20px;
     letter-spacing: -1px;
   }
