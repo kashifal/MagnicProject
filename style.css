@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&display=swap");
 
 :root {
-  --primary-color: #212d97;
+  --primary-color: #0077B5;
   --border: rgba(33, 45, 151, 0.32);
   --paragraph-font: "open sans", calibri;
 }
@@ -50,7 +50,7 @@ body {
 }
 
 .navbar-left-section img {
-  width: 17%;
+  width: 8%;
 }
 
 .navbar-right-section {
@@ -72,7 +72,7 @@ body {
 .navbar-right-section a:nth-child(1) {
   border: 1px solid var(--border);
   color: white;
-  color: #212d97;
+  color: #0077B5;
   text-decoration: none;
 }
 
@@ -93,7 +93,7 @@ body {
 }
 ::placeholder {
   color: #aaaaaa;
-  font-size: 12px;
+  font-size: 15px;
 }
 .input-field {
   padding: 10px 35px;
@@ -112,12 +112,13 @@ body {
 .icon {
   z-index: 1;
   float: left;
-  left: 3%;
+  left: 15%;
+  margin-right: 3%;
   color: #777777;
   position: absolute;
 }
 .input-field:focus {
-  border: 1px solid #212d97;
+  border: 1px solid #0077B5;
 }
 /*
 Navbar Style End Here
@@ -128,8 +129,7 @@ Navbar Style End Here
 /*
 Navbar Style End Here
 */
-
-
+ 
 .pop-up-form
 {
 position: fixed;
@@ -154,7 +154,7 @@ transform: translate(-50%, -50%);
 transition: 0.3s ease;
   z-index: 5;
   position: fixed;
-  background-color: #212d97b2;
+  background-color: #0077B5b2;
   backdrop-filter: blur(6px); 
   top: 0%;
   background-size: cover;
@@ -210,7 +210,7 @@ display: none;
 
 .forget
 {
-    color: #212d97;
+    color: #0077B5;
     margin-top: 10px;
     width: 100%;
     font-weight: 700;
@@ -225,7 +225,7 @@ display: none;
   width: 100%;
   margin-top: 20px;
   height: 12%;
-  background-color: #212d97;
+  background-color: #0077B5;
   border-radius:4px;
   color: white;
   cursor: pointer;
@@ -246,7 +246,7 @@ display: none;
   padding: 20px 20px;
   width: 20px;
   display: flex;
-  border: 1px solid #212d97;
+  border: 1px solid #0077B5;
   margin-right: 10px;
   align-items: center;
   justify-content: center;
@@ -274,7 +274,7 @@ display: none;
 }
 .popup-last a
 { 
-  color: #212d97;
+  color: #0077B5;
 }
 /*
 Navbar Style End Here
@@ -294,6 +294,9 @@ Navbar Style End Here
   align-items: center;
 
   justify-content: center;
+  /* background-image: url('https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aGFwcHklMjBmYW1pbHl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60');
+  background-size: cover;
+  background-position: center; */
 }
 .banner-margin {
   height: 96%;
@@ -337,6 +340,98 @@ select {
   color: #aaaaaa;
   font-family: "FontAwesome", var(--paragraph-font);  
   appearance: none;
+}
+
+
+
+.test 
+{
+  height: 80vh;
+  width: 100%;
+  background-image: url('https://images.pexels.com/photos/463996/pexels-photo-463996.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-position: center;
+  position: relative;
+  background-size: cover; 
+  display: flex;
+  align-items: center;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  justify-content: center;
+  overflow: hidden;
+  background-attachment: fixed;
+}
+/*#0077B5; */
+.test::before
+{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  background-color: #0076b586;
+  content: '';
+  z-index: 3;
+  width: 100%; 
+  height: 100%;
+}
+.test-margin
+{
+  height: 100%;
+  width: 90%; 
+  z-index: 4;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}  
+.input-container1 {
+  width: 590px;
+  height: 20%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+} 
+.input-field1 {
+  padding: 10px 20px;
+  width: 100%;
+  outline: none;
+  font-family: var(--paragraph-font);
+  font-weight: 600;
+  color: #222222fa;
+  line-height: 30px;
+  background-color: white;
+  height: 60%; 
+  border-radius: 4px;
+  border: 1px solid #dddddd;
+  font-size: 20px;
+}
+.icon1 {
+  z-index: 1;
+  float: left;
+  right: 1%; 
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  color: #ffffff;
+  background-color: #0077B5;
+  position: absolute;
+}
+.input-field1:focus {
+  border: 1px solid #0077B5;
+}
+
+.test-margin h2
+{
+  color: white;
+  font-size: 60px;
+  font-weight: 700; 
+}
+.test-margin p 
+{
+  color: white;
+  font-size: 16px; 
 }
 
 option {
@@ -506,7 +601,7 @@ option {
 label {
   width: 33.3%;
   border: none;
-  color: #212d97;
+  color: #0077B5;
   display: flex;
   text-align: center;
   outline: none;
@@ -526,7 +621,7 @@ label {
   border-bottom-right-radius: 10px;
 }
 .active {
-  background-color: #212d97;
+  background-color: #0077B5;
   color: white;
 }
 
@@ -534,7 +629,7 @@ label {
   height: 12%;
   width: 100%;
   text-align: center;
-  background-color: #212d97;
+  background-color: #0077B5;
   border-radius: 10px;
   font-size: 12px;
   cursor: pointer;
@@ -594,10 +689,10 @@ label {
   justify-content: center;
   transition: 0.3s ease;
   flex-direction: column;
-  color: #212d97;
+  color: #0077B5;
 }
 .types1-1:hover {
-  background-color: #212d97;
+  background-color: #0077B5;
   color: white;
 
   cursor: pointer;
@@ -608,7 +703,7 @@ label {
   margin-top: 10px;
 }
 .types1-1 span {
-  color: #212d97;
+  color: #0077B5;
 }
 .text h2 {
   letter-spacing: -1px;
@@ -741,7 +836,7 @@ CAROUSEL
   text-decoration: none;
   font-size: 8px;
   color: white;
-  background-color: #212d97;
+  background-color: #0077B5;
 }
 .adress {
   display: flex;
@@ -754,7 +849,7 @@ CAROUSEL
 }
 .adress i
 {
-  color: #212d97;
+  color: #0077B5;
 }
 .adress p {
   font-size: 12px;
@@ -781,11 +876,12 @@ CAROUSEL
 .specialIn .bed .iconify {
   width: 19px;
   height: 19px;
+    color: #0077B5;
 }
 .specialIn .bed p {
   font-size: 10px;
   font-weight: 600;
-}
+}  
 .buttons {
   width: 100%;
   margin-bottom: 20px;
@@ -795,7 +891,7 @@ CAROUSEL
   flex-direction: column;
 }
 .buttons a:nth-child(1) {
-  background-color: #212d97;
+  background-color: #0077B5;
   text-align: center;
   display: flex;
   align-items: center;
@@ -816,14 +912,14 @@ CAROUSEL
   font-weight: bold;
   margin-top: 5px;
   align-items: center;
-  border: 1px solid #212d97;
+  border: 1px solid #0077B5;
   justify-content: center;
   text-decoration: none;
   font-size: 11px;
   width: 100%;
   height: 36.59px;
   border-radius: 5px;
-  color: #212d97;
+  color: #0077B5;
 }
 .picture1 {
   height: 25vh;
@@ -871,7 +967,7 @@ card designing have been ended here
 
  
 footer{ 
-  background: #212D97;
+  background: #0077B5;
   width: 100%;
   margin-bottom: 0;
   left: 0;
@@ -970,7 +1066,7 @@ footer .content .link-boxes .box{
   left: 0;
   bottom: -2px;
   height: 2px;
-  width: 35px;
+  width: 30px;
   background: #fff;
 }
 .content .link-boxes .box li{
@@ -1138,21 +1234,13 @@ footer .bottom-details .bottom_text{
   justify-content: center;
   height: 20%;
   width: 100%;
-  background-color: #212d97;
+  background-color: #0077B5;
   color: white;
   bottom: 0%;
   cursor: pointer;
   transition: 0.4s ease;
   position: absolute;
-}
-
-.lahore:hover::after {
-  top: 0%;
-  left: 0%;
-  height: 100%;
-  background-color: #212d9798;
-  width: 100%;
-}
+} 
 
 .nankana {
   overflow: hidden;
@@ -1169,12 +1257,13 @@ footer .bottom-details .bottom_text{
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   height: 20%;
   width: 100%;
-  background-color: #212d97;
+  background-color: #0077B5;
   color: white;
   bottom: 0%;
+  cursor: pointer;
+  transition: 0.4s ease;
   position: absolute;
 }
 
@@ -1193,12 +1282,13 @@ footer .bottom-details .bottom_text{
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   height: 20%;
   width: 100%;
-  background-color: #212d97;
+  background-color: #0077B5;
   color: white;
   bottom: 0%;
+  cursor: pointer;
+  transition: 0.4s ease;
   position: absolute;
 }
 
@@ -1213,21 +1303,33 @@ footer .bottom-details .bottom_text{
   background-position: center;
 }
 .Islamabad::after {
-  content: "Islamabad";
+   content: "Islamabad";
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   height: 20%;
   width: 100%;
-  background-color: #212d97;
+  background-color: #0077B5;
   color: white;
   bottom: 0%;
+  cursor: pointer;
+  transition: 0.4s ease;
   position: absolute;
 }
 #bg-image.lazy {
   background-image: none;
   background-color: #f1f1fa;
+}
+#bg-image:hover:after
+{
+    top: 0%;
+    content: 'Search';
+    position: absolute;
+  left: 0%;
+  height: 100%;
+  background-color: #0077B598;
+  cursor: pointer;
+  width: 100%;
 }
 .bahawalpur {
   overflow: hidden;
@@ -1244,12 +1346,13 @@ footer .bottom-details .bottom_text{
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   height: 20%;
   width: 100%;
-  background-color: #212d97;
+  background-color: #0077B5;
   color: white;
   bottom: 0%;
+  cursor: pointer;
+  transition: 0.4s ease;
   position: absolute;
 }
 
@@ -1268,12 +1371,13 @@ footer .bottom-details .bottom_text{
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   height: 20%;
   width: 100%;
-  background-color: #212d97;
+  background-color: #0077B5;
   color: white;
   bottom: 0%;
+  cursor: pointer;
+  transition: 0.4s ease;
   position: absolute;
 }
 
@@ -1292,12 +1396,13 @@ footer .bottom-details .bottom_text{
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   height: 20%;
   width: 100%;
-  background-color: #212d97;
+  background-color: #0077B5;
   color: white;
   bottom: 0%;
+  cursor: pointer;
+  transition: 0.4s ease;
   position: absolute;
 }
 
@@ -1312,16 +1417,17 @@ footer .bottom-details .bottom_text{
   background-position: center;
 }
 .murree::after {
-  content: "Murree";
+ content: "Murree";
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   height: 20%;
   width: 100%;
-  background-color: #212d97;
+  background-color: #0077B5;
   color: white;
   bottom: 0%;
+  cursor: pointer;
+  transition: 0.4s ease;
   position: absolute;
 }
 
@@ -1336,16 +1442,17 @@ footer .bottom-details .bottom_text{
   background-position: center;
 }
 .peshawar::after {
-  content: "peshawar";
+  content: "Peshawar";
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   height: 20%;
   width: 100%;
-  background-color: #212d97;
+  background-color: #0077B5;
   color: white;
   bottom: 0%;
+  cursor: pointer;
+  transition: 0.4s ease;
   position: absolute;
 }
 .quetta {
@@ -1359,16 +1466,17 @@ footer .bottom-details .bottom_text{
   background-position: center;
 }
 .quetta::after {
-  content: "quetta";
+   content: "Quetta";
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   height: 20%;
   width: 100%;
-  background-color: #212d97;
+  background-color: #0077B5;
   color: white;
   bottom: 0%;
+  cursor: pointer;
+  transition: 0.4s ease;
   position: absolute;
 }
 .kashmir {
@@ -1382,16 +1490,17 @@ footer .bottom-details .bottom_text{
   background-position: center;
 }
 .kashmir::after {
-  content: "kashmir";
+  content: "Kashmir";
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   height: 20%;
   width: 100%;
-  background-color: #212d97;
+  background-color: #0077B5;
   color: white;
   bottom: 0%;
+  cursor: pointer;
+  transition: 0.4s ease;
   position: absolute;
 }
 .sialkot {
@@ -1405,16 +1514,17 @@ footer .bottom-details .bottom_text{
   background-position: center;
 }
 .sialkot::after {
-  content: "sialkot";
+  content: "Sialkot";
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   height: 20%;
   width: 100%;
-  background-color: #212d97;
+  background-color: #0077B5;
   color: white;
   bottom: 0%;
+  cursor: pointer;
+  transition: 0.4s ease;
   position: absolute;
 }
 
@@ -1458,7 +1568,7 @@ end grid system here
 .companies h2 {
   font-size: 52px;
   font-family: "Averia Serif Libre", cursive;
-  color: #212d9762;
+  color: #0077B562;
 }
 
 /*
@@ -1479,7 +1589,7 @@ Media Queries
     justify-content: center;
     transition: 0.3s ease;
     flex-direction: column;
-    color: #212d97;
+    color: #0077B5;
   }
 }
 
@@ -1503,7 +1613,7 @@ Media Queries at max-width:1300px
     justify-content: center;
     transition: 0.3s ease;
     flex-direction: column;
-    color: #212d97;
+    color: #0077B5;
   }
   .form {
     height: 100%;
@@ -1597,7 +1707,7 @@ Media Queries at max-width:1300px
   label {
     width: 33.3%;
     border: none;
-    color: #212d97;
+    color: #0077B5;
     display: flex;
     text-align: center;
     outline: none;
@@ -1617,7 +1727,7 @@ Media Queries at max-width:1300px
     border-bottom-right-radius: 10px;
   }
   .active {
-    background-color: #212d97;
+    background-color: #0077B5;
     color: white;
   }
 
@@ -1625,7 +1735,7 @@ Media Queries at max-width:1300px
     height: 12%;
     width: 100%;
     text-align: center;
-    background-color: #212d97;
+    background-color: #0077B5;
     border-radius: 10px;
     font-size: 12px;
     cursor: pointer;
@@ -1654,7 +1764,7 @@ Media Queries at max-width:1000px
     justify-content: center;
     transition: 0.3s ease;
     flex-direction: column;
-    color: #212d97;
+    color: #0077B5;
   }
   .form {
     height: 50%;
@@ -1748,7 +1858,7 @@ Media Queries at max-width:1000px
   label {
     width: 33.3%;
     border: none;
-    color: #212d97;
+    color: #0077B5;
     display: flex;
     text-align: center;
     outline: none;
@@ -1768,7 +1878,7 @@ Media Queries at max-width:1000px
     border-bottom-right-radius: 10px;
   }
   .active {
-    background-color: #212d97;
+    background-color: #0077B5;
     color: white;
   }
 
@@ -1776,7 +1886,7 @@ Media Queries at max-width:1000px
     height: 12%;
     width: 100%;
     text-align: center;
-    background-color: #212d97;
+    background-color: #0077B5;
     border-radius: 10px;
     font-size: 12px;
     cursor: pointer;
@@ -1859,7 +1969,7 @@ Media Queries at max-width:500px
     transition: 0.3s ease;
     gap: 10px;
     flex-direction: column;
-    color: #212d97;
+    color: #0077B5;
   }
   .form {
     height: 50%;
@@ -1953,7 +2063,7 @@ Media Queries at max-width:500px
   label {
     width: 33.3%;
     border: none;
-    color: #212d97;
+    color: #0077B5;
     display: flex;
     text-align: center;
     outline: none;
@@ -1973,7 +2083,7 @@ Media Queries at max-width:500px
     border-bottom-right-radius: 10px;
   }
   .active {
-    background-color: #212d97;
+    background-color: #0077B5;
     color: white;
   }
 
@@ -1981,7 +2091,7 @@ Media Queries at max-width:500px
     height: 12%;
     width: 100%;
     text-align: center;
-    background-color: #212d97;
+    background-color: #0077B5;
     border-radius: 10px;
     font-size: 12px;
     cursor: pointer;

@@ -169,3 +169,13 @@ $(document).ready(function () {
 });
 
 
+const input1 = document.querySelector('.input-field1');
+const icon1 = document.querySelector('.icon1');
+
+
+
+icon1.addEventListener('click', function () {
+  if (input1.value === '') {
+    alert('Empty Search')
+  }
+})
