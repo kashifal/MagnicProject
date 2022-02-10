@@ -32,11 +32,27 @@ for (var i = 0; i < label.length; i++) {
 
 $(document).ready(function () {
   $('.carousel').slick({
-    slidesToShow: 4,
+    slidesToShow: 5,
     centerMode: true,
     autoplay: true,
     infinite: true,
     responsive: [
+      {
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 2,
+          infinite: true,
+        }
+      },
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+          infinite: true,
+        }
+      },
       {
         breakpoint: 1024,
         settings: {
@@ -46,14 +62,7 @@ $(document).ready(function () {
         }
       },
       {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 2
-        }
-      },
-      {
-        breakpoint: 480,
+        breakpoint: 700,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
@@ -308,14 +317,18 @@ const Pakistan = [
   "Zafarwal"
 ];
 
+
+
+
+
+
+
 Pakistan.forEach(e => {
 
   const tag = document.createElement('a');
   const a = tag.innerHTML = e;
   const b = tag.href = '#';
-  console.log(b);
   const c = document.querySelector('.arrayOfcity-margin').appendChild(tag);
-  console.log(c);
 })
 
 
@@ -326,3 +339,9 @@ explore.addEventListener('click', function () {
   document.querySelector('.arrayOfcity').classList.toggle('okh');
 
 });
+
+
+
+window.addEventListener('click', (e) => {
+  console.log(e.target.innerHTML);
+})

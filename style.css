@@ -784,7 +784,6 @@ CAROUSEL
   justify-content: space-between;
   overflow: hidden;
   flex-direction: column;
-  padding: 6px 6px;
 }
 
 .card2 {
