@@ -2363,7 +2363,7 @@ Media Queries at max-width:500px
       text-align: center;
     }
     .card1 {
-      height: 440px;
+      height: 460px;
       box-sizing: border-box;
     }
 
@@ -2377,7 +2377,7 @@ Media Queries at max-width:500px
 @media all and (max-width: 400px) {
   .card1 {
     width: 70vw;
-    height: 390px;
+    height: 440px;
     box-sizing: border-box;
   }
 
@@ -2497,7 +2497,7 @@ Media Queries at max-width:500px
 @media all and (max-width: 320px) {
   .card1 {
     width: 90vw;
-    height: 390px;
+    height: 420px;
     box-sizing: border-box;
   }
 }
