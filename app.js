@@ -1,22 +1,5 @@
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//radio 
-
-
 var radio = document.getElementById('radio')
 
 
@@ -65,13 +48,22 @@ $(document).ready(function () {
         breakpoint: 700,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          variableWidth: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 2,
+          arrows: false,
+          variableWidth: true
         }
       }
     ]
   });
 });
-
 
 
 
@@ -176,19 +168,6 @@ $(document).ready(function () {
     }]
   });
 });
-
-
-const input1 = document.querySelector('.input-field1');
-const icon1 = document.querySelector('.icon1');
-
-
-
-icon1.addEventListener('click', function () {
-  if (input1.value === '') {
-    alert('Empty Search')
-  }
-})
-
 
 
 
@@ -342,6 +321,14 @@ explore.addEventListener('click', function () {
 
 
 
-window.addEventListener('click', (e) => {
-  console.log(e.target.innerHTML);
+function run() {
+  document.querySelector('.sidebar').classList.add('showSidebar');
+  document.querySelector('.side-lay').classList.add('showSidebar');
+};
+
+
+document.querySelector('.side-lay').addEventListener('click', function () {
+
+  document.querySelector('.sidebar').classList.remove('showSidebar');
+  document.querySelector('.side-lay').classList.remove('showSidebar');
 })
