@@ -1,5 +1,4 @@
 
-alert('Hi I have been pulled by You mean Kashif')
 var radio = document.getElementById('radio')
 
 
