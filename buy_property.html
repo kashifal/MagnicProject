@@ -9,15 +9,17 @@
     <link rel="stylesheet" href="css/buy_property.css">
 </head>
 <body>
-
 <div class="navbar">
     <div class="navbar-margin">
         <div class="navbar-left-section">
             <img src="images/new1.png" alt="">
-            <a href="#">Buy</a>
-            <a href="#">Rent</a>
-            <a href="#">Projects</a>
-            <a href="#">Contact Us</a>
+            <span>
+                <a href="buy_property.html">Buy</a>
+                <a href="#">Rent</a>
+                <a href="#">Projects</a>
+
+                <a href="#">Contact</a>
+            </span>
 
         </div>
         <div class="navbar-right-section">
@@ -64,11 +66,25 @@
                 <span style="margin-left: 5px;">Add Property</span>
 
             </a>
-            <a class="add" href="#popup"><i class="far fa-user" aria-hidden="true"></i></a>
+            <a class="add" href="#popup1"><i class="far fa-user" aria-hidden="true"></i></a>
+            <button onclick="run()" class="barz"><i class="fa fa-bars"></i></button>
         </div>
     </div>
 </div>
 
+<!-- Sidebar -->
+<!-- Sidebar will showed us when screen size will be 880 -->
+<div class="sidebar">
+    <a href="disable" disabled></a>
+    <a href="#">Add Property</a>
+    <a href="#">Buy</a>
+    <a href="#">Rent</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+    <a href="#">Sign Up</a>
+    <a href="#">Log In</a>
+</div>
+<div class="side-lay"></div>
 
 
 <div class="buy_accor_city">
@@ -1912,6 +1928,39 @@
     </div>
 
 
+    <div class="pop-up-form">
+        <div class="popup-head">
+            <h2>Sign In</h2>
+            <i class="fa fa-times times"></i>
+        </div>
+        <form action="#" class="popup-body">
+            <h2>Welcome to Kashif.com</h2>
+            <input type="text" placeholder="Email Adress or Phone" name="" id="">
+            <input type="text" placeholder="Password" name="" id="">
+            <a href="#" class="forget">Forget Password?</a>
+            <button type="submit">Sign In</button>
+            <br><br>
+            <div class="re">
+                <p class="forget">Or Sign in with </p>
+                <a href="#">
+                    <img src="https://img.icons8.com/color/10/000000/google-logo.png" />
+                </a>
+                <a href="#">
+                    <img src="https://img.icons8.com/color/25/000000/facebook-new.png" />
+                </a>
+            </div>
+            <div class="popup-last">
+                <a href="#">
+                    Create Free Account Now
+                </a>
+            </div>
+        </form>
+    
+    </div>
+    </div>
+    <div class="pop-up-overlay"></div>
+
+
   <footer>
     <div class="content">
         <div class="top">
@@ -1979,10 +2028,126 @@
  
 
 
-
 <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
 <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
 <script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script> 
-    <script src="script.js"></script>
+<script>
+
+    
+
+        document.querySelector('.btn').addEventListener('click', function () {
+            document.querySelector('.hms').classList.toggle('show');
+
+            document.querySelector('.hms1').classList.remove('show');
+            document.querySelector('.hms2').classList.remove('show');
+        })
+        document.querySelector('.btn1').addEventListener('click', function () {
+            document.querySelector('.hms1').classList.toggle('show');
+
+            document.querySelector('.hms').classList.remove('show');
+            document.querySelector('.hms2').classList.remove('show');
+        })
+        document.querySelector('.btn2').addEventListener('click', function () {
+            document.querySelector('.hms2').classList.toggle('show');
+
+            document.querySelector('.hms').classList.remove('show');
+            document.querySelector('.hms1').classList.remove('show');
+        })
+
+
+
+
+
+        //radio
+
+        var radio = document.getElementById('radio')
+
+
+        var label = radio.getElementsByClassName("not-active");
+
+        for (var i = 0; i < label.length; i++) {
+            label[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+
+
+        const wrap = document.querySelector(".embla");
+        const viewPort = wrap.querySelector(".embla__viewport");
+        const prevBtn = wrap.querySelector(".embla__button--prev");
+        const nextBtn = wrap.querySelector(".embla__button--next");
+        const setupPrevNextBtns = (prevBtn, nextBtn, embla) => {
+            prevBtn.addEventListener("click", embla.scrollPrev, false);
+            nextBtn.addEventListener("click", embla.scrollNext, false);
+        };
+
+        const disablePrevNextBtns = (prevBtn, nextBtn, embla) => {
+            return () => {
+                if (embla.canScrollPrev()) prevBtn.removeAttribute("disabled");
+                else prevBtn.setAttribute("disabled", "disabled");
+
+                if (embla.canScrollNext()) nextBtn.removeAttribute("disabled");
+                else nextBtn.setAttribute("disabled", "disabled");
+            };
+        };
+
+        const embla = EmblaCarousel(viewPort, {
+            dragFree: true,
+            containScroll: "trimSnaps"
+        });
+        const disablePrevAndNextBtns = disablePrevNextBtns(
+            prevBtn,
+            nextBtn,
+            embla
+        );
+
+        setupPrevNextBtns(prevBtn, nextBtn, embla);
+
+        embla.on("select", disablePrevAndNextBtns);
+        embla.on("init", disablePrevAndNextBtns);
+
+
+
+
+        function run() {
+            document.querySelector('.sidebar').classList.add('showSidebar');
+            document.querySelector('.side-lay').classList.add('showSidebar');
+        };
+
+
+        document.querySelector('.side-lay').addEventListener('click', function () {
+
+            document.querySelector('.sidebar').classList.remove('showSidebar');
+            document.querySelector('.side-lay').classList.remove('showSidebar');
+        })
+
+
+        const sidebar = document.querySelector('.pop-up-form');
+        const overlay = document.querySelector('.pop-up-overlay');
+        const times = document.querySelector('.times');
+        const bars = document.querySelector('.add');
+
+
+
+        bars.addEventListener('click', function () {
+            sidebar.classList.toggle('show');
+            overlay.classList.add('show')
+        });
+        overlay.addEventListener('click', function () {
+            sidebar.classList.remove('show');
+            sidebar.style.transition = '0.3s ease-in'
+            overlay.classList.remove('show')
+        })
+
+
+        times.addEventListener('click', function () {
+            sidebar.classList.remove('show');
+            sidebar.style.transition = '0.3s ease-in'
+            overlay.classList.remove('show')
+        })
+
+</script>
 </body>
 </html>
