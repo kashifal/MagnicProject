@@ -176,6 +176,7 @@
                     <div class="grid0 grid5">
                         <img src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070__480.jpg" alt="">
                     </div> 
+                    
 
             </div>
             <div class="description"><br><br>
@@ -304,7 +305,11 @@
 <!-- End Footer -->
 <script>
     
-
+    navigator.geolocation.getCurrentPosition(position => {
+        const { latitude, longitude } = position.coords;
+        console.log(latitude, longitude);
+        console.log(`https://www.google.pt/maps/@${latitude},${longitude}`);
+    });
  
 
         function run() {

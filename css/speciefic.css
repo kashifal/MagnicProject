@@ -43,7 +43,7 @@ body {
 }
 .navbar-left-section {
   height: 100%;
-  width: 50%;
+  width: 65%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -65,7 +65,7 @@ body {
 }
 .navbar-right-section {
   height: 100%;
-  width: 50%;
+  width: 30%;
   display: flex;
   align-items: center;
   justify-content: flex-end;

@@ -42,7 +42,7 @@ body {
 }
 .navbar-left-section {
   height: 100%;
-  width: 50%;
+  width: 65%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -65,7 +65,7 @@ body {
 
 .navbar-right-section {
   height: 100%;
-  width: 50%;
+  width: 30%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -163,6 +163,7 @@ body {
   width: 100%;
   overflow: auto;
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   margin-top: 10px;
   justify-content: flex-start;
@@ -184,9 +185,18 @@ label {
   font-weight: 400;
 }
 
+.city_list::-webkit-scrollbar {
+  width: 15px;
+  height: 8px;
+  background-color: var(--primary-color);
+}
+.city_list::-webkit-scrollbar-thumb {
+  background-color: #0077b5;
+}
 /*Cardsssssssssssssssssssssssssssssssssssssssssssss*/
 .embla {
   position: relative;
+  margin-top: 5vh;
   width: 100%;
   margin-left: auto;
   display: flex;
@@ -352,6 +362,9 @@ label {
 
   padding: 0;
 }
+.features span {
+  margin-left: 10px;
+}
 .embla__button:hover {
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
@@ -489,7 +502,7 @@ Filter and looooooooooooocation
   height: 100vh;
   z-index: 2;
   position: sticky;
-  top: 12%;
+  top: 5%;
   width: 50%;
   bottom: 0%;
   overflow: hidden;
@@ -499,19 +512,19 @@ Filter and looooooooooooocation
 .filters {
   height: 7vh;
   width: 100vw;
+  z-index: 3;
   position: sticky;
   top: 0%;
   display: flex;
   background-color: var(--primary-color);
   padding-left: 20px;
   float: right;
-  z-index: 5;
   align-items: center;
   justify-content: flex-start;
 }
 
 .filters h4 {
-  font-size: 20px;
+  font-size: 18px;
   color: white;
 }
 
@@ -519,6 +532,7 @@ Filter and looooooooooooocation
   text-decoration: none;
   padding: 6px 20px;
   margin-left: 20px;
+  z-index: 4;
   position: relative;
   border: 1px solid var(--border);
   cursor: pointer;
@@ -537,6 +551,7 @@ Filter and looooooooooooocation
   position: relative;
   padding: 6px 20px;
   margin-left: 20px;
+  z-index: 4;
   border: 1px solid var(--border);
   cursor: pointer;
   color: var(--primary-color);
@@ -551,6 +566,7 @@ Filter and looooooooooooocation
 }
 .filter_1 .btn2 {
   text-decoration: none;
+  z-index: 4;
   padding: 6px 20px;
   position: relative;
   margin-left: 20px;
@@ -865,6 +881,9 @@ footer .bottom-details .bottom_text {
   }
 }
 @media (max-width: 520px) {
+  .filters h4 {
+    display: none;
+  }
   footer::before {
     top: 145px;
   }
@@ -979,9 +998,122 @@ footer .bottom-details .bottom_text {
     align-items: center;
     justify-content: center;
   }
+
+  .filter_1 .btn {
+    text-decoration: none;
+    padding: 6px 10px;
+    margin-left: 20px;
+    position: relative;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    color: var(--primary-color);
+    border-radius: 4px;
+    font-family: var(--paragraph-font);
+    font-weight: 400;
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  .filter_1 .btn1 {
+    text-decoration: none;
+    position: relative;
+    padding: 6px 10px;
+    margin-left: 20px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    color: var(--primary-color);
+    border-radius: 4px;
+    font-family: var(--paragraph-font);
+    font-weight: 400;
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  .filter_1 .btn2 {
+    text-decoration: none;
+    padding: 6px 10px;
+    position: relative;
+    margin-left: 20px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    color: var(--primary-color);
+    border-radius: 4px;
+    font-family: var(--paragraph-font);
+    font-weight: 400;
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
 }
 
 @media all and (max-width: 520px) {
+  .price p {
+    font-size: 18px;
+  }
+  .home-name p {
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  .desc {
+    display: none;
+  }
+  .filter_1 .btn {
+    text-decoration: none;
+    padding: 6px 20px;
+    margin-left: 10px;
+    position: relative;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    color: var(--primary-color);
+    border-radius: 4px;
+    font-family: var(--paragraph-font);
+    font-weight: 400;
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  .filter_1 .btn1 {
+    text-decoration: none;
+    position: relative;
+    padding: 6px 20px;
+    margin-left: 10px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    color: var(--primary-color);
+    border-radius: 4px;
+    font-family: var(--paragraph-font);
+    font-weight: 400;
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  .filter_1 .btn2 {
+    text-decoration: none;
+    padding: 6px 20px;
+    position: relative;
+    margin-left: 10px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    color: var(--primary-color);
+    border-radius: 4px;
+    font-family: var(--paragraph-font);
+    font-weight: 400;
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
   .embla__slide {
     position: relative;
     min-width: 60%;
@@ -1184,5 +1316,92 @@ footer .bottom-details .bottom_text {
 }
 
 .show {
+  display: block;
+}
+
+@media all and (max-width: 1150px) {
+  .property_map {
+    height: 100vh;
+    z-index: 2;
+    display: none;
+    position: sticky;
+    top: 12%;
+    width: 50%;
+    bottom: 0%;
+    overflow: hidden;
+    right: 0%;
+    display: none;
+  }
+  .property_information {
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    padding-left: 10px;
+  }
+
+  .filter_and_location {
+    width: 100vw;
+    min-height: 100vh;
+    margin-bottom: 10vh;
+  }
+
+  .home-info {
+    height: 40vh;
+    width: 100%;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgb(223, 223, 223);
+    display: flex;
+
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    justify-content: space-between;
+  }
+}
+
+.phone {
+  position: fixed;
+  height: 50%;
+  width: 40%;
+  top: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0%;
+  border-radius: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 6;
+  background-color: var(--primary-color);
+  backdrop-filter: blur(2px);
+  display: none;
+  border: 1px solid black;
+}
+.phone a {
+  padding: 10px 20px;
+  background-color: white;
+  font-size: 16px;
+  position: fixed;
+  color: var(--primary-color);
+  text-decoration: none;
+  border-radius: 4px;
+  border: transparent;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  outline: none;
+}
+.phone_lay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.521);
+  position: fixed;
+  z-index: 11;
+  top: 0%;
+  left: 0%;
+  z-index: 5;
+  display: none;
+}
+.showNum {
   display: block;
 }
