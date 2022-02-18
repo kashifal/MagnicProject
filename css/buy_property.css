@@ -482,34 +482,6 @@ Filter and looooooooooooocation
   color: var(--primary-color);
 }
 
-.rent_property_image {
-  height: 500px;
-  border-radius: 10px;
-  width: 90%;
-  margin-left: 5%;
-  position: relative;
-  overflow: hidden;
-  background-size: cover;
-  background-color: var(--primary-color);
-  background-image: url("https://images.unsplash.com/photo-1600047508788-786f3865b4b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHByb3BlcnR5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60  ");
-}
-.rent_property_image::after {
-  background-color: #0076b581;
-  position: absolute;
-  top: 0%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 70px;
-  font-weight: 700;
-  left: 0%;
-  content: "Rent Property";
-  width: 100%;
-  height: 100%;
-}
-
 .contact-save {
   width: 100%;
   height: 16%;
@@ -1432,4 +1404,34 @@ footer .bottom-details .bottom_text {
 }
 .showNum {
   display: block;
+}
+.rent_property_image {
+  width: 90%;
+  height: 500px;
+  background-color: #0077b5;
+  background-image: url("https://images.unsplash.com/photo-1500281781950-6cd80847ebcd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fHByb3BlcnR5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+  overflow: hidden;
+  border-radius: 5px;
+  background-size: cover;
+  position: relative;
+  margin-left: 5%;
+  margin-top: 3%;
+}
+.rent_property_image::after {
+  width: 100%;
+  height: 100%;
+  content: "Buy Property";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  background-color: #0076b59c;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 70px;
+  font-weight: 700;
+}
+
+@media all and (max-width: 600px) {
 }
