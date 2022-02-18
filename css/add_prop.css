@@ -153,6 +153,22 @@ body {
 .sidebar a:nth-child(1) {
   pointer-events: none;
 }
+input[type="file"] {
+  display: none;
+}
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  height: 80px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: var(--primary-color);
+}
 
 .side-lay {
   position: fixed;
@@ -307,7 +323,114 @@ body {
   border-top: 1px solid rgb(228, 227, 227);
   justify-content: center;
 }
+.active {
+  background-color: #0077b5;
+  color: white;
+}
+.user_demand {
+  width: 100vw;
+  height: 30vh;
+  margin-top: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user_demand_margin {
+  width: 100%;
+  height: 200px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#radio {
+  display: flex;
+  gap: 5px;
+}
+#radio label {
+  padding: 10px 30px;
+  border-radius: 5px;
+  border: 1px solid var(--primary-color);
+}
+.add_property {
+  min-height: 120vh;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.complete_form {
+  width: 90%;
+  height: 100%;
+}
+label {
+  display: block;
+  font-size: 16px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: 700;
+  display: block;
+}
+input {
+  width: 100%;
+  margin-top: 5px;
+  height: 48px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid var(--border);
+  padding: 10px 10px;
+}
 
+select {
+  width: 100%;
+  height: 48px;
+  margin-top: 5px;
+  font-size: 16px;
+  border: 1px solid var(--border);
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+textarea {
+  width: 100%;
+  padding: 10px 10px;
+  resize: none;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid var(--border);
+}
+.p_photos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.submit {
+  padding: 12px 20px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  margin-top: 10px;
+  color: white;
+  width: 15%;
+}
+
+.p_features {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.p_features button {
+  padding: 10px 13px;
+  border-radius: 5px;
+  outline: none;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  background-color: white;
+}
 .popup-last a {
   color: #0077b5;
 }
@@ -334,5 +457,11 @@ body {
     display: block;
     font-size: 20px;
     cursor: pointer;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .submit {
+    width: 100%;
   }
 }
