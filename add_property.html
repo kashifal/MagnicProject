@@ -117,6 +117,17 @@
             </div>
       
     </div>
+    <div class="p_title">
+        <label for="ice-cream-choice">Select Property type:</label>
+        <input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
+        
+        <datalist id="ice-cream-flavors">
+            <option value="Home">
+            <option value="Hostel">
+            <option value="Shop">
+            <option value="Building">
+        </datalist>
+    </div>
         <div class="p_title">
             <label for="#">Add Title</label>
             <input type="text" placeholder="10 Marla Luxury Home " name="home_name" id="">
@@ -155,15 +166,15 @@
         <label for="#">Features</label>
         <div class="p_features">
             
-            <button>Drawing Room</button>
-            <button>Prayer Room</button>
-            <button>Laundry Room</button>
-            <button>Store Room</button>
-            <button>Study Room</button>
-            <button>Kitchn</button>
-            <button>Gym</button>
-            <button>Launge</button>
-            <button>Servent Quarters</button>
+            <label>Drawing Room</label>
+            <label>Prayer Room</label>
+            <label>Laundry Room</label>
+            <label>Store Room</label>
+            <label>Study Room</label>
+            <label>Kitchn</label>
+            <label>Gym</label>
+            <label>Launge</label>
+            <label>Servent Quarters</label>
         </div>
     
         <div class="p_area_unit">
@@ -323,6 +334,24 @@
     <div class="pop-up-overlay"></div>
 
     <script>
+
+
+const labels = document.querySelectorAll('.p_features label');
+
+
+
+labels.forEach(label => {
+    label.addEventListener('click', function(){
+        label.style.backgroundColor = '#0077b5';
+        label.style.color= 'white';
+    })
+})
+
+
+
+
+
+
         var radio = document.getElementById('radio')
 
 
