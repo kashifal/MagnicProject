@@ -140,6 +140,13 @@ ul li {
   font-size: 22px;
   font-family: "open sans";
 }
+
+.navbar-left-section .logo {
+  font-size: 24px;
+  text-decoration: none;
+  font-weight: 700;
+  color: black;
+}
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));

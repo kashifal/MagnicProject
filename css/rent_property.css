@@ -190,6 +190,13 @@ label {
   height: 8px;
   background-color: var(--primary-color);
 }
+
+.navbar-left-section .logo {
+  font-size: 24px;
+  text-decoration: none;
+  font-weight: 700;
+  color: black;
+}
 .city_list::-webkit-scrollbar-thumb {
   background-color: #0077b5;
 }
