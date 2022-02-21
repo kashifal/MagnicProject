@@ -41,6 +41,37 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+.side-lay {
+  position: fixed;
+  display: none;
+  transition: 0.3s ease;
+  height: 100%;
+  width: 100%;
+  z-index: 14;
+  background-color: rgba(44, 42, 42, 0.589);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  top: 0%;
+  left: 0%;
+  display: none;
+}
+
+.side-lay a {
+  background-color: white;
+  padding: 5px 5px;
+  margin-right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.753);
+}
 
 .bars {
   display: none;
@@ -175,23 +206,6 @@ input[type="file"] {
   justify-content: center;
   font-size: 30px;
   color: var(--primary-color);
-}
-
-.side-lay {
-  position: fixed;
-  display: none;
-  transition: 0.3s ease;
-  height: 100%;
-  width: 100%;
-  z-index: 14;
-  background-color: rgba(44, 42, 42, 0.589);
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  top: 0%;
-  left: 0%;
-  display: none;
 }
 
 .pop-up-form {
@@ -678,6 +692,9 @@ footer .bottom-details .bottom_text {
     width: 35px;
     font-size: 14px;
     line-height: 35px;
+  }
+  .sidebar {
+    width: 70%;
   }
   footer .content .link-boxes .box {
     width: calc(100% / 3 - 10px);

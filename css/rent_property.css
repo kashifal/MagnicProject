@@ -132,11 +132,26 @@ body {
   background-color: rgba(44, 42, 42, 0.589);
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
+  justify-content: flex-end;
   top: 0%;
   left: 0%;
   display: none;
+}
+
+.side-lay a {
+  background-color: white;
+  padding: 5px 5px;
+  margin-right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.753);
 }
 /* buy_accor_cityyyyyyyyyyyyyyyyyyyyyyyyyyyyyy  */
 
@@ -173,6 +188,13 @@ body {
   letter-spacing: -1;
 }
 
+.navbar-left-section .logo {
+  font-size: 24px;
+  text-decoration: none;
+  font-weight: 700;
+  color: black;
+}
+
 label {
   text-decoration: none;
   padding: 10px 30px;
@@ -189,13 +211,6 @@ label {
   width: 15px;
   height: 8px;
   background-color: var(--primary-color);
-}
-
-.navbar-left-section .logo {
-  font-size: 24px;
-  text-decoration: none;
-  font-weight: 700;
-  color: black;
 }
 .city_list::-webkit-scrollbar-thumb {
   background-color: #0077b5;
@@ -527,14 +542,29 @@ Filter and looooooooooooocation
   padding-left: 20px;
   float: right;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
-
-.filters h4 {
-  font-size: 18px;
+.filters_margin {
+  height: 100%;
+  width: 90%;
+  display: flex;
+  align-items: center;
   color: white;
+  text-decoration: none;
 }
-
+.filters_margin a {
+  color: white;
+  font-size: 18px;
+  font-family: "open sans", calibri;
+  text-decoration: none;
+  font-weight: 600;
+}
+.filters_margin a i {
+  padding: 10px 20px;
+  background-color: white;
+  color: var(--primary-color);
+  border-radius: 4px;
+}
 .filter_1 .btn {
   text-decoration: none;
   padding: 6px 20px;
@@ -1416,7 +1446,7 @@ footer .bottom-details .bottom_text {
   width: 90%;
   height: 500px;
   background-color: #0077b5;
-  background-image: url("https://images.unsplash.com/photo-1500281781950-6cd80847ebcd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fHByb3BlcnR5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+  background-image: url("https://images.unsplash.com/photo-1581573950452-5a438c5f390f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60");
   overflow: hidden;
   border-radius: 5px;
   background-size: cover;
@@ -1438,4 +1468,141 @@ footer .bottom-details .bottom_text {
   justify-content: center;
   font-size: 70px;
   font-weight: 700;
+}
+
+@media all and (max-width: 520px) {
+  .rent_property_image::after {
+    width: 100%;
+    height: 100%;
+    content: "Rent Property";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: #0076b59c;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .sidebar {
+    width: 70%;
+  }
+
+  .home-name p {
+    font-size: 16px;
+  }
+  .price p {
+    font-weight: 700;
+    font-size: 19px;
+  }
+  .home-info {
+    height: 30vh;
+    width: 100vw;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgb(223, 223, 223);
+    display: flex;
+
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    justify-content: space-between;
+  }
+  .home-name p {
+    font-size: 15px;
+    font-weight: 400;
+  }
+  .price p {
+    font-size: 15px;
+    font-weight: 400;
+  }
+  .features span svg {
+    width: 20px;
+  }
+  .contact-save a svg {
+    width: 18px;
+  }
+
+  .contact-save {
+    width: 100%;
+    height: 15%;
+    padding: 18px 12px;
+    border-radius: 4px;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media all and (max-width: 320px) {
+  .rent_property_image::after {
+    width: 100%;
+    height: 100%;
+    content: "Rent Property";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: #0076b59c;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 700;
+  }
+}
+
+@media all and (max-width: 300px) {
+  .rent_property_image::after {
+    width: 100%;
+    height: 100%;
+    content: "Rent Property";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: #0076b59c;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .home-info {
+    height: 30vh;
+    width: 100vw;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgb(223, 223, 223);
+    display: flex;
+
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    justify-content: space-between;
+  }
+  .home-name p {
+    font-size: 13px;
+    font-weight: 400;
+  }
+  .price p {
+    font-size: 13px;
+    font-weight: 400;
+  }
+  .features span svg {
+    width: 20px;
+  }
+  .contact-save a svg {
+    width: 18px;
+  }
+
+  .contact-save {
+    width: 100%;
+    height: 13%;
+    padding: 18px 12px;
+    border-radius: 4px;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }

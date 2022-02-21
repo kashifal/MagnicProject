@@ -78,15 +78,19 @@
     <!-- Sidebar will showed us when screen size will be 880 -->
     <div class="sidebar">
         <a href="disable" disabled></a>
-        <a href="#">Add Property</a>
-        <a href="#">Buy</a>
-        <a href="#">Rent</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
+        <a href="add_property.html">Add Property</a>
+        <a href="buy_property.html">Buy</a>
+        <a href="rent_property.html">Rent</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
         <a href="#">Sign Up</a>
-        <a href="#">Log In</a>
+        <a href="#popup1">Log In</a>
     </div>
-    <div class="side-lay"></div>
+    <div class="side-lay">
+      <a class="times" href="#"> 
+           <i class="fa fa-times"></i>
+    </a>
+    </div>
 
     <div class="rent_property_image">
 
@@ -2012,55 +2016,15 @@
     </footer>
 
 
+
+
+
+
     <div class="phone">
     </div>
-    <div class="phone_lay">
-
+    <div class="phone_lay"> 
     </div>
 
-
-
-<div class="filter_sidebar">
-    <form   action="" method="post" class="filter_sidebar_margin"> 
-        <h2>Property Type</h2><br>
-  <div class="p_type_filter" id="radio">
-    <br> 
-    <label for="#" class="not-active_fil active_fil">Residentail</label>
-    <label for="#" class="not-active_fil">Plots</label>
-    <label for="#" class="not-active_fil">Commercial</label> 
-
-  </div><br><br>
-<h2>Price Range</h2><br>
-<div class="p_type_filter">
-    <br>
-    <label for="#">Min</label>
-    <input type="number"    value="100000"  name="" id="">
-    <label for="#">Max</label>
-    <input type="number" value="500000" name="" id="">
-
-</div><br><br>
-<h2>Size Range</h2><br>
-<div class="p_type_filter">
-    <br>
-    <label for="#">Unit</label>
-    <select name="#" id="">
-        <option value="marla">Marla</option>
-        <option value="kanal">Kanal</option>
-        <option value="#">Square Feet</option>
-        <option value="3">Square Yards</option>
-        <option value="#">Square Meters</option>
-        <option value="#">Acre</option>
-    </select>
-    
-    <label for="#">Min</label>
-    <input type="number" value="10" name="" id="">
-    <label for="#">Max</label>
-    <input type="number" value="50" name="" id=""><br>
-</div><br>
-<button class="btn_fil">Add Filter</button>
-</form>
-</div>
-<div class="filter_sidebar_overlay"></div>
 
 
 
@@ -2081,26 +2045,9 @@ active_fil.forEach(f => {
     });
 });
 
+ 
 
-
-const filter_sidebar =document.querySelector('.filter_sidebar');
-const filter_sidebar_overlay = document.querySelector('.filter_sidebar_overlay');
-const filter = document.querySelector('.filter');
-
-filter.addEventListener('click', () => {
-    const filter_sidebar = document.querySelector('.filter_sidebar').classList.add('show');
-    const filter_sidebar_overlay = document.querySelector('.filter_sidebar_overlay').classList.add('show');
-})
-
-    document.querySelector('.filter_sidebar_overlay').addEventListener('click', () => {
-      document.querySelector('.filter_sidebar').classList.remove('show');
-        document.querySelector('.filter_sidebar_overlay').classList.remove('show');
-    });
-
-      filter.addEventListener('click', function(e){
-         e.preventDefault()
-     });
-
+    
 
         const phone = document.querySelector('.phone');
 
@@ -2192,6 +2139,11 @@ filter.addEventListener('click', () => {
             document.querySelector('.side-lay').classList.remove('showSidebar');
         })
 
+
+        document.querySelector('.times').addEventListener('click', () => {
+             document.querySelector('.sidebar').classList.remove('showSidebar');
+            document.querySelector('.side-lay').classList.remove('showSidebar');
+        })
 
         const sidebar = document.querySelector('.pop-up-form');
         const overlay = document.querySelector('.pop-up-overlay');
