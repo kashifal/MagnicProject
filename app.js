@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const sidebar = document.querySelector('.pop-up-form');
 const overlay = document.querySelector('.pop-up-overlay');
-const times = document.querySelector('.times');
+const timess = document.querySelector('.timess');
 const bars = document.querySelector('.add');
 
 
@@ -137,7 +137,7 @@ overlay.addEventListener('click', function () {
 })
 
 
-times.addEventListener('click', function () {
+timess.addEventListener('click', function () {
   sidebar.classList.remove('show');
   sidebar.style.transition = '0.3s ease-in'
   overlay.classList.remove('show')
