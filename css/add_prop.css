@@ -707,3 +707,22 @@ footer .bottom-details .bottom_text {
     width: 100%;
   }
 }
+
+@media all and (max-width: 320px) {
+  .headtext {
+    font-size: 18px;
+  }
+  .user_demand_margin h2 {
+    font-size: 18px;
+  }
+  .p_features label {
+    font-size: 10px;
+  }
+  label {
+    font-size: 13px;
+  }
+
+  .sidebar {
+    width: 70%;
+  }
+}
