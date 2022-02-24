@@ -14,7 +14,7 @@
     <div class="navbar">
         <div class="navbar-margin">
             <div class="navbar-left-section">
-            <a class="logo" style="text-decoration: none;" href="/"><b style="color: #22577e;">e</b>House</a>
+                <a class="logo" style="text-decoration: none;" href="/"><b style="color: #22577e;">e</b>House</a>
                 <span>
                     <a href="buy_property.html">Buy</a>
                     <a href="rent_property.html">Rent</a>
@@ -87,9 +87,9 @@
         <a href="#popup1">Log In</a>
     </div>
     <div class="side-lay">
-      <a class="times" href="#"> 
-           <i class="fa fa-times"></i>
-    </a>
+        <a class="times" href="#">
+            <i class="fa fa-times"></i>
+        </a>
     </div>
 
     <div class="rent_property_image">
@@ -446,12 +446,171 @@
     </div>
 
     <div class="filters">
-       <div class="filters_margin">
-           <a href="#">
-               <i class="fa fa-ellipsis-v filter"> </i>
-              <span style="margin-left: 15px;">Add Filters</span>
-           </a>
-       </div>
+        <form action="/" method="get" class="menu">
+            <ul>
+                <li class="li">
+                    <a href="#">Property Type</a>
+                    <div class="sub-menu " id="ok">
+                        <ul>
+                            <li>
+                                <a href="#">Residential
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="#">Commercial
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="#">Plots
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="#">Penthouse
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="#">Office
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="#">Warehouse
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="#">Farmhouse
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="#">Factory
+                                </a>
+
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </li>
+                <li class="li">
+                    <a href="#">Price Range</a>
+                    <div class="sub-menu">
+                        <ul>
+                            <li>
+                                <span>Pakistani rupees </span>
+                                <span class="flex">
+                                    <div class="min">
+                                        <span for="#">Min</span>
+                                        <input type="range" class="range" value="1000000" min="1000000" max="100000000"
+                                            oninput="this.nextElementSibling.value = this.value" />
+                                        <input class="newinp" type="text" value="1000000" />
+                                    </div>
+                                    <div class="max">
+                                        <span for="#">Max</span>
+                                        <input type="range" class="range" value="100000000" min="1000000"
+                                            max="100000000" oninput="this.nextElementSibling.value = this.value" />
+                                        <input class="newinp" type="text" value="100000000" />
+                                    </div>
+                                </span>
+
+                                <button class="sub-btn" type="submit">Apply</button>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="li">
+                    <a href="#">Size Range</a>
+                    <div id="sol" class="sub-menu">
+                        <ul>
+                            <li>
+                                <span for="#">Area Unit:</span>
+                                <select class="unit" name="#" id="">
+                                    <option value="#">Marla</option>
+                                    <option value="#">Square Feet</option>
+                                    <option value="#">Square Meter</option>
+                                    <option value="#">Square Yards</option>
+                                    <option value="#">Kanal</option>
+                                    <option value="#">Acre</option>
+                                </select>
+                                <div class="flex">
+                                    <div class="min">
+                                        <span for="#">Min</span>
+                                        <input type="range" class="range" value="1" min="1" max="50"
+                                            oninput="this.nextElementSibling.value = this.value" />
+                                        <input type="text" value="1" />
+                                    </div>
+                                    <div class="max">
+                                        <span for="#">Max</span>
+                                        <input type="range" class="range" value="50" min="1 " max="50"
+                                            oninput="this.nextElementSibling.value = this.value" />
+                                        <input type="text" value="50" />
+                                    </div>
+                                </div>
+
+                                <button class="sub-btn" type="submit">Apply</button>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="li">
+                    <a href="#">More Filters</a>
+                    <div id="sol-1" class="sub-menu">
+                        <ul>
+                            <li>
+                                <span for="#">Beds</span>
+                                <div class="checkBox">
+
+                                </div>
+                                <div class="flex">
+                                    <div class="min">
+                                        <span for="#">Min</span>
+                                        <input type="range" class="range" value="1" min="1" max="10"
+                                            oninput="this.nextElementSibling.value = this.value" />
+                                        <input type="text" value="1" />
+                                    </div>
+                                    <div class="max">
+                                        <span for="#">Max</span>
+                                        <input type="range" class="range" value="1" min="1 " max="10"
+                                            oninput="this.nextElementSibling.value = this.value" />
+                                        <input type="text" value="10" />
+                                    </div>
+                                </div>
+                                <br>
+                                <span for="#">Bathrooms</span>
+                                <div class="checkBox">
+
+                                </div>
+                                <div class="flex">
+                                    <div class="min">
+                                        <span for="#">Min</span>
+                                        <input type="range" class="range" value="1" min="1" max="10"
+                                            oninput="this.nextElementSibling.value = this.value" />
+                                        <input type="text" value="1" />
+                                    </div>
+                                    <div class="max">
+                                        <span for="#">Max</span>
+                                        <input type="range" class="range" value="1" min="1 " max="10"
+                                            oninput="this.nextElementSibling.value = this.value" />
+                                        <input type="text" value="10" />
+                                    </div>
+                                </div>
+
+                                <button class="sub-btn" type="submit">Apply</button>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+
+            </ul>
+        </form>
     </div>
 
     <div class="filter_and_location">
@@ -2022,7 +2181,7 @@
 
     <div class="phone">
     </div>
-    <div class="phone_lay"> 
+    <div class="phone_lay">
     </div>
 
 
@@ -2036,18 +2195,18 @@
 
 
 
-const active_fil = document.querySelectorAll('.not-active_fil'); 
+        const active_fil = document.querySelectorAll('.not-active_fil');
 
-active_fil.forEach(f => {
-    f.addEventListener('click', () => {
-        f.style.backgroundColor = '#0077b5';
-        f.style.color = 'white';
-    });
-});
+        active_fil.forEach(f => {
+            f.addEventListener('click', () => {
+                f.style.backgroundColor = '#0077b5';
+                f.style.color = 'white';
+            });
+        });
 
- 
 
-    
+
+
 
         const phone = document.querySelector('.phone');
 
@@ -2069,7 +2228,7 @@ active_fil.forEach(f => {
             document.querySelector('.phone_lay').classList.remove('showNum')
         })
 
- 
+
 
 
 
@@ -2090,6 +2249,10 @@ active_fil.forEach(f => {
         }
 
 
+
+        document.querySelector('ul').addEventListener('click', function (e) {
+            e.preventDefault();
+        });
         const wrap = document.querySelector(".embla");
         const viewPort = wrap.querySelector(".embla__viewport");
         const prevBtn = wrap.querySelector(".embla__button--prev");
@@ -2141,7 +2304,7 @@ active_fil.forEach(f => {
 
 
         document.querySelector('.times').addEventListener('click', () => {
-             document.querySelector('.sidebar').classList.remove('showSidebar');
+            document.querySelector('.sidebar').classList.remove('showSidebar');
             document.querySelector('.side-lay').classList.remove('showSidebar');
         })
 

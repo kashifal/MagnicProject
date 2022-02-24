@@ -445,13 +445,171 @@
         </div>
     </div>
 
-    <div class="filters">
-        <div class="filters_margin">
-            <a href="#">
-                <i class="fa fa-ellipsis-v filter"> </i>
-                <span style="margin-left: 15px;">Add Filters</span>
-            </a>
-        </div>
+    <div class="filters"> 
+        <form action="/" method="get" class="menu">
+            <ul>
+                <li class="li">
+                    <a href="#">Property Type</a>
+                    <div class="sub-menu " id="ok">
+                        <ul >
+                            <li>
+                                <a href="#">Residential
+                                    </a> 
+                             
+                            </li>
+                            <li>
+                                <a href="#">Commercial
+                                </a>
+                            
+                            </li>
+                            <li>
+                                <a href="#">Plots
+                                </a>
+                            
+                            </li>
+                             <li>
+                                <a href="#">Penthouse
+                                </a>
+                            
+                            </li>
+                             <li>
+                                <a href="#">Office
+                                </a>
+                            
+                            </li>
+                            <li>
+                                <a href="#">Warehouse
+                                </a>
+                            
+                            </li>
+                            <li>
+                                <a href="#">Farmhouse
+                                </a>
+                            
+                            </li>
+                            <li>
+                                <a href="#">Factory
+                                </a>
+                            
+                            </li>
+                         
+                          
+                        </ul>
+                    </div>
+                </li>
+                <li class="li">
+                    <a href="#">Price Range</a>
+                    <div class="sub-menu">
+                        <ul>
+                            <li>
+                               <span>Pakistani rupees </span>
+                              <span class="flex">
+                                    <div class="min">
+                                        <span for="#">Min</span>
+                                        <input type="range" class="range" value="1000000" min="1000000" max="100000000"
+                                            oninput="this.nextElementSibling.value = this.value" />
+                                        <input class="newinp" type="text" value="1000000" />
+                                    </div>
+                                    <div class="max">
+                                        <span for="#">Max</span>
+                                        <input type="range" class="range" value="100000000" min="1000000" max="100000000"
+                                            oninput="this.nextElementSibling.value = this.value" />
+                                        <input class="newinp" type="text" value="100000000" />
+                                    </div>
+                              </span>
+        
+                                <button class="sub-btn" type="submit">Apply</button>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="li">
+                    <a href="#">Size Range</a>
+                    <div class="sub-menu">
+                        <ul>
+                            <li>
+                                <span for="#">Area Unit:</span>
+                                <select class="unit" name="#" id="">
+                                    <option value="#">Marla</option>
+                                    <option value="#">Square Feet</option>
+                                    <option value="#">Square Meter</option>
+                                    <option value="#">Square Yards</option>
+                                    <option value="#">Kanal</option>
+                                    <option value="#">Acre</option>
+                                </select>
+                              <div class="flex">
+                                    <div class="min">
+                                        <span for="#">Min</span>
+                                        <input type="range" class="range" value="1" min="1" max="50" oninput="this.nextElementSibling.value = this.value" />
+                                        <input type="text" value="1" />
+                                    </div>
+                                    <div class="max">
+                                        <span for="#">Max</span>
+                                        <input type="range" class="range" value="50" min="1 " max="50"
+                                            oninput="this.nextElementSibling.value = this.value" />
+                                        <input type="text" value="50" />
+                                    </div>
+                              </div>
+        
+                                <button class="sub-btn" type="submit">Apply</button>
+                            </li>
+                          
+                        </ul>
+                    </div>
+                </li>
+                 
+                <li class="li">
+                    <a href="#">More Filters</a>
+                    <div class="sub-menu">
+                        <ul>
+                            <li>
+                                <span for="#">Beds</span>
+                                    <div class="checkBox">
+                                
+                                    </div>
+                                <div class="flex">
+                                    <div class="min">
+                                        <span for="#">Min</span>
+                                        <input type="range" class="range" value="1" min="1" max="10"
+                                            oninput="this.nextElementSibling.value = this.value" />
+                                        <input type="text" value="1" />
+                                    </div>
+                                    <div class="max">
+                                        <span for="#">Max</span>
+                                        <input type="range" class="range" value="1" min="1 " max="10"
+                                            oninput="this.nextElementSibling.value = this.value" />
+                                        <input type="text" value="10" />
+                                    </div>
+                                </div>
+                 <br>
+                                <span for="#">Bathrooms</span>
+                                <div class="checkBox">
+                                
+                                </div>
+                                <div class="flex">
+                                    <div class="min">
+                                        <span for="#">Min</span>
+                                        <input type="range" class="range" value="1" min="1" max="10"
+                                            oninput="this.nextElementSibling.value = this.value" />
+                                        <input type="text" value="1" />
+                                    </div>
+                                    <div class="max">
+                                        <span for="#">Max</span>
+                                        <input type="range" class="range" value="1" min="1 " max="10"
+                                            oninput="this.nextElementSibling.value = this.value" />
+                                        <input type="text" value="10" />
+                                    </div>
+                                </div>
+                                
+                                <button class="sub-btn" type="submit">Apply</button>
+                            </li>
+                
+                        </ul>
+                    </div>
+                </li>
+             
+            </ul>   
+        </form>
     </div>
 
     <div class="filter_and_location">
@@ -2090,6 +2248,10 @@
         }
 
 
+
+ document.querySelector('ul').addEventListener('click', function(e){
+    e.preventDefault();
+});
         const wrap = document.querySelector(".embla");
         const viewPort = wrap.querySelector(".embla__viewport");
         const prevBtn = wrap.querySelector(".embla__button--prev");
