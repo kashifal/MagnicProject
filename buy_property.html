@@ -449,36 +449,50 @@
         <form action="/" method="get" class="menu">
             <ul>
                 <li class="li">
+                    <a href="#">Buy</a>
+                    <div class="sub-menu " id="ok">
+                        <ul>
+                            <li id="buyorrent">
+                                <select name="#" id="">
+                                    <option value="#">Buy</option>
+                                    <option value="#">Rent</option>
+                                </select>
+                                <button type="submit">Apply</button>
+                             </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="li">
                     <a href="#">Property Type</a>
                     <div class="sub-menu " id="ok">
                         <ul>
                             <li>
-                                <a href="#">Residential
+                                <a style="color: #0077b5;" href="#">Residential
                                 </a>
 
                             </li>
                             <li>
-                                <a href="#">Commercial
+                                <a style="color: #0077b5;"  href="#">Commercial
                                 </a>
 
                             </li>
                             <li>
-                                <a href="#">Plots
+                                <a style="color: #0077b5;"  href="#">Plots
                                 </a>
 
                             </li>
                             <li>
-                                <a href="#">Penthouse
+                                <a style="color: #0077b5;"  href="#">Penthouse
                                 </a>
 
                             </li>
                             <li>
-                                <a href="#">Office
+                                <a style="color: #0077b5;"  href="#">Office
                                 </a>
 
                             </li>
                             <li>
-                                <a href="#">Warehouse
+                                <a style="color: #0077b5;"  href="#">Warehouse
                                 </a>
 
                             </li>
@@ -499,7 +513,7 @@
                 </li>
                 <li class="li">
                     <a href="#">Price Range</a>
-                    <div class="sub-menu">
+                    <div id="sol-0" class="sub-menu">
                         <ul>
                             <li>
                                 <span>Pakistani rupees </span>
@@ -2208,20 +2222,7 @@
 
 
 
-        const phone = document.querySelector('.phone');
-
-        const phoneNumber = document.querySelectorAll('.phone_number');
-
-        phoneNumber.forEach(p => {
-            p.addEventListener('click', function () {
-                const a = document.createElement('a')
-                a.href = p.href;
-                a.innerHTML = p.href;
-                phone.appendChild(a);
-                phone.classList.add('showNum')
-                document.querySelector('.phone_lay').classList.add('showNum')
-            })
-        })
+       
         document.querySelector('.phone_lay').addEventListener('click', function () {
 
             phone.classList.remove('showNum')

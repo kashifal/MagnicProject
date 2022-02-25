@@ -531,7 +531,7 @@ Filter and looooooooooooocation
 }
 
 .filters {
-  height: 8vh;
+  min-height: 8vh;
   width: 100vw;
   z-index: 3;
   position: sticky;
@@ -544,7 +544,7 @@ Filter and looooooooooooocation
   align-items: center;
   justify-content: center;
   box-shadow: rgba(167, 168, 170, 0.2) 0px 8px 24px;
-  background-color: white;
+  background-color: var(--primary-color);
 }
 .hms {
   height: 250px;
@@ -1373,7 +1373,7 @@ footer .bottom-details .bottom_text {
   width: 90%;
   height: 500px;
   background-color: #0077b5;
-  background-image: url("https://images.unsplash.com/photo-1581573950452-5a438c5f390f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60");
+  background-image: url("https://images.unsplash.com/photo-1618347191821-51285853505f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Zm9yJTIwcmVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
   overflow: hidden;
   border-radius: 5px;
   background-size: cover;
@@ -1401,7 +1401,7 @@ footer .bottom-details .bottom_text {
   .rent_property_image::after {
     width: 100%;
     height: 100%;
-    content: "Rent Property";
+    content: "Buy Property";
     position: absolute;
     top: 0%;
     left: 0%;
@@ -1537,6 +1537,7 @@ footer .bottom-details .bottom_text {
   width: 100%;
   height: 100%;
   display: flex;
+  overflow-x: auto;
   align-items: center;
   overflow-y: hidden;
   justify-content: flex-start;
@@ -1548,17 +1549,18 @@ footer .bottom-details .bottom_text {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
 .menu ul li {
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid var(--border);
+  border: 1px solid white;
 }
 .menu ul li a {
   text-decoration: none;
   width: 100%;
 
-  color: var(--primary-color);
+  color: white;
 }
 .sub-menu {
   display: none;
@@ -1648,7 +1650,7 @@ span {
   .menu ul li {
     padding: 5px;
 
-    border: 1px solid var(--border);
+    border: 1px solid white;
   }
   .menu {
     width: 100%;
@@ -1658,12 +1660,6 @@ span {
     overflow-y: hidden;
     overflow-x: auto;
     justify-content: flex-start;
-  }
-  #sol {
-    right: 0%;
-  }
-  #sol-1 {
-    right: 0%;
   }
 }
 
@@ -1684,4 +1680,40 @@ span {
     justify-content: flex-start;
     flex-wrap: wrap;
   }
+  #sol {
+    right: 0%;
+  }
+  #sol-1 {
+    right: 0%;
+  }
+}
+@media all and (max-width: 500px) {
+  #sol-0 {
+    left: 0%;
+  }
+  #sol-1 {
+    left: 0%;
+  }
+}
+#buyorrent {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#buyorrent select {
+  width: 100%;
+  height: 30px;
+}
+#buyorrent button {
+  margin-top: 10px;
+  width: 100%;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  color: white;
+  border: transparent;
+  padding: 5px 5px;
+  cursor: pointer;
 }
