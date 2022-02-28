@@ -440,15 +440,20 @@ Filter and looooooooooooocation
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   justify-content: space-between;
 }
+
 .home-images {
   width: 35%;
   position: relative;
   height: 80%;
   overflow: hidden;
-  background-image: url("https://www.graana.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fgraanacom%2Fimage%2Fupload%2Fc_fill%2Cw_260%2Ch_260%2Cf_auto%2Cq_auto%2Cf_auto%2Fv1644492322%2Fslezgoiues9sz9m3uqeo.jpg&w=1920&q=75");
-  background-size: cover;
-  background-position: center;
   border-radius: 10px;
+  background-size: cover;
+  object-fit: cover;
+}
+.home-images img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 .home-images::before {
   width: 100%;
@@ -654,7 +659,7 @@ Filter and looooooooooooocation
   margin-top: 20px;
 }
 .searchbar form input {
-  min-width: 40%;
+  min-width: 80%;
   padding: 12px;
   border-radius: 5px;
   border-color: transparent;
@@ -1462,7 +1467,7 @@ footer .bottom-details .bottom_text {
   width: 90%;
   height: 500px;
   background-color: #0077b5;
-  background-image: url("https://images.unsplash.com/photo-1599658880436-c61792e70672?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGJ1eXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+  background-image: url("/images/home_4.jpg");
   overflow: hidden;
   border-radius: 5px;
   background-size: cover;
