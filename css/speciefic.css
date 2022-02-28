@@ -23,6 +23,8 @@ body {
 .pkr {
   font-weight: 700;
   font-size: 18px;
+  font-weight: bolder;
+  font-size: 20px;
 }
 .pkr span {
   color: var(--primary-color);

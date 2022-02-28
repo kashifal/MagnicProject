@@ -2,6 +2,7 @@
 var radio = document.getElementById('radio')
 
 
+
 var label = radio.getElementsByClassName("not-active");
 
 for (var i = 0; i < label.length; i++) {
@@ -261,6 +262,7 @@ setupPrevNextBtns(prevBtn, nextBtn, embla);
 
 embla.on("select", disablePrevAndNextBtns);
 embla.on("init", disablePrevAndNextBtns);
+
 
 
 
