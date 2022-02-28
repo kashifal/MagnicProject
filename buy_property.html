@@ -622,7 +622,9 @@
                         </ul>
                     </div>
                 </li>
-
+                <li>
+                    <a class="nom" href="#"> City</a>
+                </li>
             </ul>
         </form>
     </div>
@@ -2095,7 +2097,7 @@
     <div class="pop-up-form">
         <div class="popup-head">
             <h2>Sign In</h2>
-            <i class="fa fa-times times"></i>
+            <i class="fa fa-times tim"></i>
         </div>
         <form action="#" class="popup-body">
             <h2>Welcome to Kashif.com</h2>
@@ -2197,7 +2199,15 @@
     </div>
     <div class="phone_lay">
     </div>
-
+    <div class="searchbar">
+        <form>
+            <div class="closehim">
+                <i class="fa fa-times"></i>
+            </div><br><br>
+            <input type="text" placeholder="Enter City Name | Town | "  name="" id="">
+            <button type="submit">Search</button>
+        </form>
+    </div>
 
 
 
@@ -2207,7 +2217,13 @@
     <script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
     <script>
 
-
+        document.querySelector('.nom').addEventListener('click', () => { 
+            document.querySelector('.searchbar').style.display = "block"
+           
+        });
+    document.querySelector('.closehim').addEventListener('click', () => {
+        document.querySelector('.searchbar').style.display = "none"
+    });
 
         const active_fil = document.querySelectorAll('.not-active_fil');
 
@@ -2311,7 +2327,7 @@
 
         const sidebar = document.querySelector('.pop-up-form');
         const overlay = document.querySelector('.pop-up-overlay');
-        const times = document.querySelector('.times');
+        const times = document.querySelector('.tim');
         const bars = document.querySelector('.add');
 
 
