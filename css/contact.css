@@ -145,33 +145,17 @@ body {
   justify-content: flex-start;
   flex-direction: column;
 }
-.div0 {
-  width: 100%;
-  justify-content: flex-start;
-  display: flex;
-  text-align: justify;
-}
 .div p {
-  margin-top: 5px;
   line-height: 24px;
   color: #6b6b6b;
 }
-.div0 p {
-  height: 50px;
-  width: 50px;
-  justify-content: space-around;
-  display: flex;
-  align-items: center;
-  border: 4px dotted var(--border);
-  margin-left: 15px;
-  border-radius: 25px;
-  cursor: pointer;
-  color: var(--primary-color);
+.div h2 {
+  padding: 8px 8px;
+  color: white;
+  background-color: var(--primary-color);
+  display: inline;
 }
 
-.div0 p i {
-  color: var(--primary-color);
-}
 .over {
   z-index: 10;
 }
@@ -432,6 +416,7 @@ input[type="file"] {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  margin-bottom: 5vh;
 }
 .our_address_margin {
   height: 90%;
@@ -731,6 +716,16 @@ footer .bottom-details .bottom_text {
   footer .content .link-boxes .input-box {
     width: 40%;
     margin-top: 10px;
+  }
+  .navbar-left-section .logo {
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    color: black;
+    margin-left: -10px;
+  }
+  .bars {
+    margin-right: 20px;
   }
 }
 @media (max-width: 700px) {

@@ -1139,7 +1139,13 @@ footer .bottom-details .bottom_text {
     transition: 0.3s ease;
     display: flex;
   }
-
+  .navbar-left-section .logo {
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    color: black;
+    margin-left: -10px;
+  }
   .navbar-left-section span {
     display: none;
   }
