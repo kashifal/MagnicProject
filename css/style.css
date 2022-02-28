@@ -1843,6 +1843,13 @@ Media Queries at max-width:1000px
     transition: 0.3s ease;
     display: flex;
   }
+  .navbar-left-section .logo {
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    margin-left: -10px;
+    color: black;
+  }
   .test {
     min-height: 120vh;
     display: flex;
