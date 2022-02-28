@@ -285,6 +285,13 @@
             document.querySelector('.sidebar').classList.remove('showSidebar');
             document.querySelector('.side-lay').classList.remove('showSidebar');
         });
+         const logins = document.querySelector('.logins');
+            logins.addEventListener('click', function () {
+                sidebar.classList.toggle('show');
+                overlay.classList.add('show');
+                document.querySelector('.sidebar').classList.remove('showSidebar');
+                document.querySelector('.side-lay').classList.remove('showSidebar');
+            });
         overlay.addEventListener("click", function () {
             sidebar.classList.remove("show");
             sidebar.style.transition = "0.3s ease-in";
