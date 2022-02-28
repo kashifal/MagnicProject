@@ -7,14 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
-        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <!-- Fontawesome CDN Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
-        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <link rel="stylesheet" href="./css/contact.css">
     <title>Sell | Rent Proprty</title>
 </head>
@@ -94,8 +90,8 @@
         <a href="rent_property.html">Rent</a>
         <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a>
-        <a href="#">Sign Up</a>
-        <a href="#popup1">Log In</a>
+        <a class="signup" href="#">Sign Up</a>
+        <a class="login" href="#popup1">Log In</a>
     </div>
     <div class="side-lay">
         <a class="times" href="#">
@@ -290,6 +286,13 @@
             sidebar.classList.toggle("show");
             overlay.classList.add("show");
         });
+          const login = document.querySelector('.login');
+            login.addEventListener('click', function () {
+                sidebar.classList.toggle('show');
+                overlay.classList.add('show');
+                document.querySelector('.sidebar').classList.remove('showSidebar');
+                document.querySelector('.side-lay').classList.remove('showSidebar');
+            });
         overlay.addEventListener("click", function () {
             sidebar.classList.remove("show");
             sidebar.style.transition = "0.3s ease-in";

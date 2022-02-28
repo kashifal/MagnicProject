@@ -96,8 +96,8 @@
         <a href="rent_property.html">Rent</a>
         <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a>
-        <a href="#">Sign Up</a>
-        <a href="#popup1">Log In</a>
+        <a class="signup" href="#">Sign Up</a>
+        <a class="login" href="#popup1">Log In</a>
     </div>
     <div class="side-lay">
         <a class="times" href="#">
@@ -353,6 +353,13 @@
                 sidebar.classList.toggle('show');
                 overlay.classList.add('show')
             });
+              const login = document.querySelector('.login');
+                login.addEventListener('click', function () {
+                    sidebar.classList.toggle('show');
+                    overlay.classList.add('show');
+                    document.querySelector('.sidebar').classList.remove('showSidebar');
+                    document.querySelector('.side-lay').classList.remove('showSidebar');
+                });
             overlay.addEventListener('click', function () {
                 sidebar.classList.remove('show');
                 sidebar.style.transition = '0.3s ease-in'

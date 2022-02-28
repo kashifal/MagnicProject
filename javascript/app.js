@@ -124,6 +124,7 @@ const sidebar = document.querySelector('.pop-up-form');
 const overlay = document.querySelector('.pop-up-overlay');
 const timess = document.querySelector('.timess');
 const bars = document.querySelector('.add');
+const login = document.querySelector('.login');
 
 
 
@@ -131,6 +132,14 @@ bars.addEventListener('click', function () {
   sidebar.classList.toggle('show');
   overlay.classList.add('show')
 });
+
+login.addEventListener('click', function () {
+  sidebar.classList.toggle('show');
+  overlay.classList.add('show');
+  document.querySelector('.sidebar').classList.remove('showSidebar');
+  document.querySelector('.side-lay').classList.remove('showSidebar');
+});
+
 overlay.addEventListener('click', function () {
   sidebar.classList.remove('show');
   sidebar.style.transition = '0.3s ease-in'

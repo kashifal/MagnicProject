@@ -84,7 +84,7 @@
         <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a>
         <a href="#">Sign Up</a>
-        <a href="#popup1">Log In</a>
+        <a class="login" href="#popup1">Log In</a>
     </div>
     <div class="side-lay">
         <a class="times" href="#">
@@ -621,6 +621,9 @@
 
                         </ul>
                     </div>
+                </li>
+                <li>
+                    <a class="nom" href="#"> City</a>
                 </li>
 
             </ul>
@@ -2198,7 +2201,15 @@
     <div class="phone_lay">
     </div>
 
-
+<div class="searchbar">
+    <form>
+        <div class="closehim">
+            <i class="fa fa-times"></i>
+        </div><br><br>
+        <input type="text" placeholder="Enter City Name | Town | " name="" id="">
+        <button type="submit">Search</button>
+    </form>
+</div>
 
 
 
@@ -2207,7 +2218,13 @@
     <script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
     <script>
 
+    document.querySelector('.nom').addEventListener('click', () => {
+        document.querySelector('.searchbar').style.display = "block"
 
+    });
+    document.querySelector('.closehim').addEventListener('click', () => {
+        document.querySelector('.searchbar').style.display = "none"
+    });
 
         const active_fil = document.querySelectorAll('.not-active_fil');
 
@@ -2320,12 +2337,19 @@
             sidebar.classList.toggle('show');
             overlay.classList.add('show')
         });
+        const login = document.querySelector('.login');
+          login.addEventListener('click', function () {
+                sidebar.classList.toggle('show');
+                overlay.classList.add('show');
+                document.querySelector('.sidebar').classList.remove('showSidebar');
+                document.querySelector('.side-lay').classList.remove('showSidebar');
+            });
         overlay.addEventListener('click', function () {
             sidebar.classList.remove('show');
             sidebar.style.transition = '0.3s ease-in'
             overlay.classList.remove('show')
         })
-
+  
 
         times.addEventListener('click', function () {
             sidebar.classList.remove('show');
