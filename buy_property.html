@@ -2400,10 +2400,10 @@
 
         const open = document.querySelectorAll('.open_message');
         open.forEach(e => {
-            e.addEventListener('click', () => {
+            e.addEventListener('click', (s) => {
                 document.querySelector('.message').style.display="block";
                 document.querySelector('.message_overlay').style.display = "block";
-              
+                s.preventDefault();
             })
             
         }) 

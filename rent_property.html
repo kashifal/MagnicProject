@@ -2395,10 +2395,12 @@
         
 
             const open = document.querySelectorAll('.open_message');
-            open.forEach(e => {
-                e.addEventListener('click', () => {
+            open.forEach(function(e) {
+                e.addEventListener('click', (s) => {
                     document.querySelector('.message').style.display = "block";
                     document.querySelector('.message_overlay').style.display = "block";
+                     s.preventDefault();
+                  
 
                 })
 
@@ -2407,12 +2409,14 @@
             document.querySelector('.tim_').addEventListener('click', () => {
                 document.querySelector('.message').style.display = "none";
                 document.querySelector('.message_overlay').style.display = "none";
+                
 
             })
             document.querySelector('.message_overlay').addEventListener('click', () => {
 
                 document.querySelector('.message').style.display = "none";
                 document.querySelector('.message_overlay').style.display = "none";
+              
 
             })
            
