@@ -74,6 +74,31 @@
         </div>
     </div>
 
+<!-- Start Message -->
+<div class="message">
+    <div class="tim_">
+        <i class="fa fa-times"></i>
+    </div>
+    <h2>Get in Touch</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus labore dolorum sed eos nesciunt aliquid.
+    </p><br>
+    <form class="message_form" action="#" method="#">
+        <input type="text" placeholder="Name" name="" id="">
+        <input type="tel" name="" value="+92 "  id="">
+        <input type="email" placeholder="Email " name="" id="">
+        <textarea name="" placeholder="What would you like to know " id="" cols="30" rows="10"></textarea>
+        <button type="submit">Request Info</button>
+    </form>
+</div>
+<div class="message_overlay"></div>
+
+<!-- End Message -->
+
+
+
+
+
     <!-- Sidebar -->
     <!-- Sidebar will showed us when screen size will be 880 -->
     <div class="sidebar">
@@ -793,7 +818,7 @@
                             </svg>
 
                         </a>
-                        <a href="tel:+928754756478" class="phone_number">
+                        <a href="#" class="phone_number open_message">
                             <svg version="1.1" id="Capa_1" width="30" height="30" fill="white   "
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                                 y="0px" viewBox="0 0 511 511" style="enable-background:new 0 0 511 511;"
@@ -1003,7 +1028,7 @@
                             </svg>
 
                         </a>
-                        <a href="tel:+928754756478" class="phone_number">
+                        <a href="#" class="phone_number open_message">
                             <svg version="1.1" id="Capa_1" width="30" height="30" fill="white   "
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                                 y="0px" viewBox="0 0 511 511" style="enable-background:new 0 0 511 511;"
@@ -1213,7 +1238,7 @@
                             </svg>
 
                         </a>
-                        <a href="tel:+928754756478" class="phone_number">
+                        <a href="#" class="phone_number open_message">
                             <svg version="1.1" id="Capa_1" width="30" height="30" fill="white   "
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                                 y="0px" viewBox="0 0 511 511" style="enable-background:new 0 0 511 511;"
@@ -1422,7 +1447,7 @@
                             </svg>
 
                         </a>
-                        <a href="tel:+928754756478" class="phone_number">
+                        <a href="#" class="phone_number open_message">
                             <svg version="1.1" id="Capa_1" width="30" height="30" fill="white   "
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                                 y="0px" viewBox="0 0 511 511" style="enable-background:new 0 0 511 511;"
@@ -1574,7 +1599,7 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ducimus?
                     </div>
                     <div class="contact-save">
-                        <a href="tel:+928754756478" class="phone_number">
+                        <a href="tel:+928754756478" class="phone_number ">
                             <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                             <svg version="1.1" width="30" height="30" fill="white   " id="Capa_1"
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -1631,7 +1656,7 @@
                             </svg>
 
                         </a>
-                        <a href="tel:+928754756478" class="phone_number">
+                        <a href="#" class="phone_number open_message">
                             <svg version="1.1" id="Capa_1" width="30" height="30" fill="white   "
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                                 y="0px" viewBox="0 0 511 511" style="enable-background:new 0 0 511 511;"
@@ -1840,7 +1865,7 @@
                             </svg>
 
                         </a>
-                        <a href="tel:+928754756478" class="phone_number">
+                        <a href="#" class="phone_number open_message">
                             <svg version="1.1" id="Capa_1" width="30" height="30" fill="white   "
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                                 y="0px" viewBox="0 0 511 511" style="enable-background:new 0 0 511 511;"
@@ -2049,7 +2074,7 @@
                             </svg>
 
                         </a>
-                        <a href="tel:+928754756478" class="phone_number">
+                        <a href="#" class="phone_number open_message">
                             <svg version="1.1" id="Capa_1" width="30" height="30" fill="white   "
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                                 y="0px" viewBox="0 0 511 511" style="enable-background:new 0 0 511 511;"
@@ -2231,6 +2256,8 @@
     <script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
     <script>
 
+      
+
         document.querySelector('.nom').addEventListener('click', () => { 
             document.querySelector('.searchbar').style.display = "block"
            
@@ -2370,6 +2397,29 @@
             overlay.classList.remove('show')
         })
 
+
+        const open = document.querySelectorAll('.open_message');
+        open.forEach(e => {
+            e.addEventListener('click', () => {
+                document.querySelector('.message').style.display="block";
+                document.querySelector('.message_overlay').style.display = "block";
+              
+            })
+            
+        }) 
+
+        document.querySelector('.tim_').addEventListener('click', () => {
+             document.querySelector('.message').style.display = "none";
+            document.querySelector('.message_overlay').style.display = "none";
+           
+        })
+        document.querySelector('.message_overlay').addEventListener('click', () => {
+            
+            document.querySelector('.message').style.display = "none";
+            document.querySelector('.message_overlay').style.display = "none";
+
+        })
+     
     </script>
 </body>
 
