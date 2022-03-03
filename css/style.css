@@ -1839,7 +1839,7 @@ Media Queries at max-width:1000px
 Media Queries at max-width:1000px
 */
 
-@media all and (max-width: 1000px) {
+@media all and (max-width: 1050px) {
   .showSidebar {
     transition: 0.3s ease;
     display: flex;

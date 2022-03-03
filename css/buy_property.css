@@ -1296,7 +1296,7 @@ footer .bottom-details .bottom_text {
   outline: none;
   border: transparent;
 }
-@media all and (max-width: 1000px) {
+@media all and (max-width: 1050px) {
   .showSidebar {
     transition: 0.3s ease;
     display: flex;

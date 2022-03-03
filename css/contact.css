@@ -464,7 +464,7 @@ input[type="file"] {
   height: 40px;
 }
 
-@media all and (max-width: 1000px) {
+@media all and (max-width: 1050px) {
   .our_address {
     min-height: 80vh;
     width: 100%;

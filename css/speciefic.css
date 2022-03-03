@@ -708,7 +708,7 @@ footer .bottom-details .bottom_text {
   margin-left: 2px;
 }
 
-@media all and (max-width: 1000px) {
+@media all and (max-width: 1050px) {
   .navbar-left-section .logo {
     font-size: 20px;
     text-decoration: none;
